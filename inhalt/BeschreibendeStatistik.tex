@@ -9,11 +9,15 @@
     $\omega$:Element oder Objekt der Grundgesamtheit
     diskret(<30 Ausprägungen), stetig($\geq$30 Ausprägungen), univariat(p=1), mulivariat(p>1)
   \subsection{Lagemaße}
-    \subsubsection{Modalwerte}
-    Am häufigsten auftretende Ausprägungen (insbesondere bei qualitativen Merkmalen)
+    \subsubsection{Modalwerte $x_{mod}$}
+    Am häufigsten auftretende Ausprägungen (insbesondere bei \textbf{qualitativen} Merkmalen)
     \subsubsection{Mittelwert}
+    R:$mean(x)$\\
+    Schwerpunkt der Daten.\textbf{Empfindlich}gegemüber Ausreißern.
     $\overline{X} = \frac{1}{n} \sum_{i=1}^{n} x_{i}$
     \subsection{Median}
+    R:$median(x)$\\
+    Liegt in der Mitt der sortierten Daten $x_{i}$. \textbf{Unempfindlich} gegenüber Ausreißern.
     \begin{equation}
       x_{0.5} =
         \begin{cases}
@@ -22,3 +26,35 @@
         \end{cases}
     \end{equation}
   \subsection{Streuungsmaße}
+    \subsubsection{Spannweite}
+    max $x_{i}$ - min $x_{i}$
+    \subsubsection{Stichprbenverians $s^2$}
+    R:$var(x)$\\
+    \textbf{Verschiebungssatz:}\\
+      $s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_{i} - \overline{x}^2) = \frac{1}{n-1} (\sum_{i=1}^{n} x_{i}^2 - n\overline{x}^2)$
+      Gemittelte Summe der quadratischen Abweichung vom Mittelwert
+      \subsubsection{Stichprobenstandardabweichung}
+      R:$sd(x)$\\
+      $s=\sqrt{s}$
+      Streuungsmaß mit gleicher Einheit wie beobachteten Daten $x_{i}$.$ \overline{x}$ minimiert die "quadratische Verlustfunktion" oder die Varianz gibt das Minimum der Fehlerquadrate an.
+      \subsection{p-Quantile}
+      R:$quantile(x,p)$. Teilt die \textbf{sortierten} Daten $x_{i}$ ca. im Verhältnis p: (1-p) d.h. $\hat{F}(x_{p)} \approx p$
+      1. Quartil = 0.25-Quantil; 
+      Median = 0.5-Quantil; 
+      3. Quartil = 0.75-Quartil; 
+      \subsection{Interquartilsabstand I}
+      $I = x_{0.75} - x_{0.25}$. Ist ein weiterer Streuungsparameter.
+      \subsection{Chebyshev}
+      $\frac{N(S_{k})}{n} > 1-\frac{1}{k^2}$, für alle k $\geq$ 1
+      $\overline{x}$ der Durchschnitt, s > 0 die Stichproben-Standardabweichung von Beobachtungswerten $x_{1}, ..., x_{n}$. Sei $S_{k} = \{i, 1 \leq i \leq n: |x_{i} - \overline{x}| < k \cdot s\}$; Für eine beliebige Zahl k $\geq$ 1 liegen mehr als $100 \cdot (1-\frac{1}{k^2})$ Prozent der Daten im Intervall von $\overline{x} - ks$ bis $ \overline{x} + ks$. \textbf{Speziell:}Für k = 2 liegen mehr als 75\% der Daten im 2s-Bereich um $\overline{x}$. Für k=3 liegen mehr als 89\% der Daten im 3s-Bereich um $\overline{x}$. \textbf{Komplement Formulierung:} $\overline{S}_{k} = \{i | |x_{i}-\overline{x}| \geq k \cdot s\}$; 
+      $\frac{N(\overline{S}_{k})}{n} \leq \frac{1}{k^2}$; Die Ungleichheit lifert nur eine \textbf{sehr grobe Abschätzung}, ist aber unabhängig von der Verteilung der Daten. \textbf{Empirische Regeln} 68\% der Daten im Bereich um $\overline{x} \pm s$. 95\% um $\overline{x} \pm 2s$. 99.7\% um $\overline{x} \pm3s$.
+      \subsection{Korrelation}
+      Grafische Zusammenhang zwischen multivariaten Daten y und y durch ein Streudiagramm. Kennzahlen zur Untersuchung des Zusammenhangs:
+      \subsubsection{Empirische Kovarians}
+      R:$cov(x,y)$;
+      $s_{xy} = \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})=\frac{1}{n-1}(\sum_{i=1}^{n}(x_{i}y_{i}- n\overline{x}\overline{y})$
+      \subsubsection{Empirische Korrellationskoeffizient r}
+      R:$cor(x,x)$;
+      $r = \frac{s_{xy}}{s_{x}x_{y}}$; Näherungsweise lin. Zusammenhang zw. x und y, falls |r| $\approx$1.
+      \subsubsection{Regressionsgerade y}
+      $y = mx + t$ mit $m=r \cdot \frac{s_{y}}{s_{x}}$ und $ t=\overline{y} -m \cdot \overline{x}$
