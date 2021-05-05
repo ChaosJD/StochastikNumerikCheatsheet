@@ -1,7 +1,39 @@
 \section{Wahrscheinlichkeitsrechnung}
-\begin{plantuml}
-	@startuml
-	Alice -> Bob: Hello
-	Alice <- Bob: Hi!
-	@enduml
-\end{plantuml}
+  \subsection{Begriffe}
+  \textbf{Ergebnisraum} $\Omega$: Menge aller möglichen Ergebnisse eines Experiments\\
+  \textbf{Elementarereignis} $\omega \in \Omega$: einzelnes Element von $\Omega$\\
+  \textbf{Ereignis}$E \subseteq \Omega$: beliebige Teilmenge des Ergebnisraums $\Omega$ heißt sicheres Ereignis, $\emptyset$ heißt unmögliches Ereignis\\
+  \textbf{Vereinigung} $E \cup F$: Ereignis E oder Ereignis F treten ein. $\bigcup_{i=1}^{n} E_{i}$: mindestens ein Ereignis $E_{i} $tritt ein.\\
+  \textbf{Schnitt} $E \cap F$: Ereignis E und Ereignis F treten ein.\\
+  $\bigcap_{i=1}^{n} E_{i}$ alle Ereignisse $E_{i}$ treten ein.
+  \textbf{Gegenereignis} $\overline{E} = \Omega /\ E$: Ereignis E tritt nicht ein (Komplement von E)\\
+  \textbf{Disjunkte Ereignisse}E  und F: $E \cap F = \emptyset$
+  \subsection{De Morgan'schen Regeln}
+  $\overline{E_{1} \cup E_{2}} = \overline{E}_{1} \cap \overline{E}_{2}$\\
+  $ \overline{E_{1} \cap E_{2}} = \overline{E}_{1} \cup \overline{E}_{2}$
+  \subsection{Wahrscheinlichkeit}
+  $0 \le P(E) \le 1$; P($\Omega$) = 1;\\
+  P($\bigcup_{i=1}^{\infty}) = \sum_{i=1}^{\infty}$ P($E_{i}$), falls $E_{i} \cap E_{j} = \emptyset$ für $i \neq j$\\
+    \subsubsection{Satz 2.1}
+    P($\overline{E}$) = 1 -P(E)\\
+    P($E \cup F$) = P(E)+ P(F) - P($E \cap F$)
+  \textbf(Übungsaufgabe!!! Ergänzen)\\
+  \subsection{Laplace-Experiment}
+  Zufallsexperimente mit n gleich wahrscheinlichen Elementarereignissen. Dann berechnet sich die Wahrscheinlichkeit P(E) für $E \subseteq \Omega$ aus:\\
+  P(E) =$\frac{Anzahl der für E günstigen Ereignisse}{Anzahl der möglichen Ereignisse} = \frac{Mächtigkeit von E}{Mächtigkeit von \Omega} = \frac{|E|}{\Omega}$
+  \textbf{text}
+  \subsection{Kombinatorik}
+  \begin{center}
+  	\begin{tabular}{|c|c|c| } 
+  		\hline
+  		& mit\\
+  		Beachtung\\
+  		der Reihenfolge & ohne\\
+  		 Beachtung\\
+  		 der Reihenfolge \\
+  		\hline
+  	    ohne Zurücklegen $k \le n$ & $\frac{n!}{(n-k)!}$ & $\binom{n}{k} = \frac{n!}{(n-k)!k!}$\\
+  		mit Zurücklegen k > n möglich & $n^k$ & $\binom{n+k -1}{k}$ \\
+  		\hline
+  	\end{tabular}
+  \end{center}
