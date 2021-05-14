@@ -5,5 +5,28 @@ Eine Abbildung $X: \Omega \rightarrow \mathbb{R}$, $\omega \mapsto X(\omega)$ = 
     \item Diskrete ZV: $X(\Omega) = {x_{1}, ..., x_{2}} (n \in \mathbb{N})$; z.B. X = \dq Augensumme beim Würfeln \dq
     \item Stetige ZV: $X(\Omega) \subseteq \mathbb{R}$; \dq z.B. Körpergröße eines Menschen\dq
   \end{itemize}
-\subsection{Verteilungsfunktion}
-
+\subsection{Verteilungsfunktion-allg.}
+Die Wahrscheinlichkeit P(B) für ein Ereignis B in $\mathbb{R}$ wird zurückgefürht auf die Wahrscheinlichkeit der entsprechenden Ereignisse in $\Omega$. Für jedes $X \in \mathbb{R}$  ist die Verteilungsfunktion F: $\mathbb{R} \rightarrow [0,1]$ einer ZV X definiert durch:\\
+	F(x) = P(X $\leq$ x)
+\begin{itemize}
+	\item $0 \leq F(x) \leq 1$
+	\item $\displaystyle\lim_{x\to-\infty} F(X)= 0 \, \lim_{x\to\infty} F(x) = 1$
+	\item monoton wachsend
+	\item $P(X > x) = 1 - F(x)$
+	\item $P(a < X \leq b) = F(b) - F(a)$
+\end{itemize}
+\subsection{Diskrete ZV}
+Für eine diskrete ZV X mit $X(\Omega) = {x_{1}, ..., x_{n}}$ ( n endlich oder abzählbar unendlich) ist die Wahrscheinlichkeitsfunktion definiert durch:\\
+\begin{equation}
+p(x) =
+\begin{cases}
+	P(X = x_{i}), \text{falls } x_{i} \in X(\Omega )\\
+	0, sonst\\
+\end{cases}
+\end{equation}
+\textbf{Es gilt:}
+\begin{itemize}
+	\item $F(x) = (P(X \leq x) = \sum_{x_{i}\leq x} p(x_{i})$
+	\item F(x) ist eine rechtseitig stetige \textbf{Treppenfunktion} mit \textbf{Sprüngen} bei der Realisation von $x_{i}$.
+\end{itemize}
+\subsection{Stegite ZVs}
