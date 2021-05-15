@@ -10,12 +10,12 @@ Die Wahrscheinlichkeit P(B) für ein Ereignis B in $\mathbb{R}$ wird zurückgef�
 	F(x) = P(X $\leq$ x)
 \begin{itemize}
 	\item $0 \leq F(x) \leq 1$
-	\item $\displaystyle\lim_{x\to-\infty} F(X)= 0 \, \lim_{x\to\infty} F(x) = 1$
+	\item $\lim\limits_{x\to-\infty} F(X)= 0 \, \lim\limits_{x\to\infty} F(x) = 1$
 	\item monoton wachsend
 	\item $P(X > x) = 1 - F(x)$
 	\item $P(a < X \leq b) = F(b) - F(a)$
 \end{itemize}
-\subsection{Diskrete ZV}
+\subsection{Diskrete ZVs}
 Für eine diskrete ZV X mit $X(\Omega) = {x_{1}, ..., x_{n}}$ ( n endlich oder abzählbar unendlich) ist die Wahrscheinlichkeitsfunktion definiert durch:\\
 \begin{equation}
 p(x) =
@@ -30,3 +30,54 @@ p(x) =
 	\item F(x) ist eine rechtseitig stetige \textbf{Treppenfunktion} mit \textbf{Sprüngen} bei der Realisation von $x_{i}$.
 \end{itemize}
 \subsection{Stegite ZVs}
+Stetige ZV X ist die Wahrscheinlichkeitsdichte f $ f : \mathbb{R} \rightarrow [0,\infty[$ definiert durch\\
+$P(a < X < b) = \int_{a}^{b} f(x) dx$\\
+\textbf{Es gilt:}
+\begin{itemize}
+	\item $F(x) = P(X \leq x) = \int_{-\infty}^{x} f(t) dt$ und $F'(x) = f(x)$
+	\item F(x) ist stetig \& $P(a < X \leq b) = P(a \leq X \leq b)$ wegen $P(X = a) = 0$
+\end{itemize}
+\subsection{Verteilungsfunktion}
+$\int_{\textbf{Untergrenze}}^{x}$ Es wird normal mit - Integriert.
+\subsection{Zusammenfassung}
+\subsubsection{Diskrete ZV}
+\begin{itemize}
+	\item Wahrscheinlichkeitsverteilung p(x) $\sum_{i}^{n} p(x_{i}) = 1 x_{i}$ ist Realisation der ZV.
+	\item Verteilungsfunktion F(x) ist rechtsseitig  stetige \textbf{Treppenfunktion}. \textbf{Sprunghöhen:}$P(X = x_{i}) = F(x_{i}) - \lim\limits_{x \to x_{i}-} \ne 0$
+	\item $P(a < X \le b) = F(b)- F(a) \ne P(a \le X \le b)$
+\end{itemize}
+\subsubsection{Stetige ZV}
+\begin{itemize}
+	\item Dichtefunktion fx $\int_{-\infty}^{\infty} f(x) dx = 1$
+	\item Verteilungsfunktion $F(x)$ ist stetig mit $F'(x) = f(x); P(X = x_{i}) = 0$
+	\item $P(a < X \leq b ) = F(b) - F(a) = P( a \leq X \leq b) = F(a \leq X < b) = P(a < X < b)$
+\end{itemize}
+\subsection{Erwartungswert}
+Der Erwartungswert $E[X] = µ$ einer ZV X ist der \textbf{Schwerpunkt} ihrer Verteilung \underline{or} der durchschnittliche zu erwartende Wert der ZV.
+\begin{itemize}
+  \item diskrete ZV: $E[X] = \sum_{i=1}^{n} x_{i} \cdot p(x_{i})$
+  \item stetige ZV: $E[X] = \int_{-\infty}^{\infty} x \cdot f(x) dx$
+\end{itemize}
+ZV ist konstant. E[X] verhält sich linear. Eigenschaften von $E[X]$:
+\begin{itemize}
+  \item $E[b] = b$
+  \item $E[aX + b] = aE[X] + b$
+  \item $E[\underbrace{X_{i} + ... + X_{n}}] = \sum_{i=1}^{n} E[X_{i}]$
+  \item $\sum_{i=1}^{n} x_{i}$
+\end{itemize}
+\subsubsection{Satz 3.1}
+Sei Y = g(X) eine Funktion der ZV X. Dann gilt:
+\begin{itemize}
+  \item für diskrete ZV:$E[g(X)] = \sum_{i=1}^{n} g(x) \cdot p(x_ {i})$
+  \item für stetige ZV: $E[g(X)] = \int_{-\infty}^{infty} g(x) \cdot f(x) dx$. Das vertauschen von E und g nur bei \textbf{linearen} Funktionen möglich. $\Rightarrow$ g(E[X])
+\end{itemize}
+\subsection{Varianz \& Kovarianz}
+Die Varianz einer ZV X mit µ ist ein quadratisches Streungsmaß. $\sigma^2 = Var[X] = E[\underbrace{(X - µ)^2}] \stackrel{\text{falls x stetig}}{=} \int_{-\infty}^{\infty} (x-\mu)^2 \cdot f(x)$\\
+g(X)\\
+Die Standardabweichung $\sigma = \sqrt{Var[X]}$ hat im Gegensatz zur Varianz die gleiche Dimension von die ZV X.
+\begin{itemize}
+  \item $Var[b] = 0$
+  \item $Var[aX + b] = a^2 Var[X]$
+\end{itemize}
+\subsubsection{Satz 3.2}
+$Var[X] = E[X^2] - (E[X])^2$ \textbf{Beim Minuend wird beim Erwartungswert nur das einfach stehende x quadriert \underline{nicht} f(x)!!!}
