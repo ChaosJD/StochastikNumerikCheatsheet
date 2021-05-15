@@ -71,7 +71,7 @@ Sei Y = g(X) eine Funktion der ZV X. Dann gilt:
   \item für diskrete ZV:$E[g(X)] = \sum_{i=1}^{n} g(x) \cdot p(x_ {i})$
   \item für stetige ZV: $E[g(X)] = \int_{-\infty}^{infty} g(x) \cdot f(x) dx$. Das vertauschen von E und g nur bei \textbf{linearen} Funktionen möglich. $\Rightarrow$ g(E[X])
 \end{itemize}
-\subsection{Varianz \& Kovarianz}
+\subsection{Varianz}
 Die Varianz einer ZV X mit µ ist ein quadratisches Streungsmaß. $\sigma^2 = Var[X] = E[\underbrace{(X - µ)^2}] \stackrel{\text{falls x stetig}}{=} \int_{-\infty}^{\infty} (x-\mu)^2 \cdot f(x)$\\
 g(X)\\
 Die Standardabweichung $\sigma = \sqrt{Var[X]}$ hat im Gegensatz zur Varianz die gleiche Dimension von die ZV X.
@@ -81,3 +81,24 @@ Die Standardabweichung $\sigma = \sqrt{Var[X]}$ hat im Gegensatz zur Varianz die
 \end{itemize}
 \subsubsection{Satz 3.2}
 $Var[X] = E[X^2] - (E[X])^2$ \textbf{Beim Minuend wird beim Erwartungswert nur das einfach stehende x quadriert \underline{nicht} f(x)!!!}
+\subsection{Z-Transformation, Standardisierung}
+Sei X eine ZV mit µ und $\sigma$. Dann ist $Z = \frac{X - \mu}{\sigma} = \frac{x}{\sigma} - \frac{\mu (konstant)}{\sigma}$ 
+\subsection{Kovarianz}
+Eigenschaften:
+\begin{itemize}
+	\item $Cov[X, Y] = Cov[Y,X]$
+	\item $Cov[X, X] = Var[X]$
+	\item $Cov[aX, Y] = a Cov[X,Y]$
+\end{itemize}
+Die Kovarianz zweier ZV (X, Y) ist definiert durch
+$Cov[X, Y] = E[(X - E[X])(Y-E[Y])$
+Die Kovarianz beschreibt die Abhängigkeit zweier ZV X und Y. \textbf{Je} stärker diese Korrelieren, \textbf{desto} (betragsmäßig) größer ist die Kovarianz. Falls $X, Y \text{stochastisch unabhängig} \Rightarrow Cov[X, Y] = 0$ 
+\subsection{Satz 3.3}
+$Cov[X, Y] = E[XY] - E[X] \cdot E[Y]$\\
+\subsubsection{Varianz einer Summe von ZV}
+\begin{itemize}
+	\item $Var[X_{i} + ... + X_{n}] = \sum_{i=1}^{n} \sum_{j=1}^{n} Cov[X_{i}, X_{j}]$;
+	$Var[X_{1} + X_{2}] = Var[X_{1}] + Var[X_{2}] + 2Cov[X_{1}, X_{2}]$
+	\item Falls $X_{i} , X_{j}$ paarweise unabhängig \textbf{!!!}: $Var[X_{1} + ...+ X_{n}] = \sum_{i=1}^{n} Var[X_{i}]$
+\end{itemize}
+\subsection{Overview µ $\sigma$}
