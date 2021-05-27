@@ -1,6 +1,6 @@
 \section{Zentraler Grenzwertsatz}
 $\mu \sigma^2$ bekannt aber nicht die Verteilung
-\subsection{ZGW}
+\subsection{ZGWS}
 Seien $ X_{i} (i=1, ..., n)$ unabhängige identische verteilte \textbf{(i.i.d)} ZV mit Erwartungswert $\mu$ und Varianz
 $ \sigma^2 $. Dann gilt für hinreichend große n ( >30) und $\overline{X} = \frac{1}{n} \sum_{i=1}^{n}$ näherungsweise:\\
 $\sum_{i=1}^{n} X_{i}  \thicksim  N_{n\mu, n\sigma^2}$  \&\\
@@ -11,11 +11,11 @@ $ \overline{X} \thicksim N_{\mu, \frac{\sigma^2}{n}} $ \& $ \frac{\overline{X}-\
 Der Satz gilt sogar allgemeiner, wenn die $X_{i}$ abhängig und nicht identisch verteilt sind, vorausgesetzt kein $ X_{i} $ ist deutlich dominanter?! als die anderen.Für die Voraussetzung des  ZGW ist, dass die $ X_{i} $ nicht normalverteilt sein müssen., damit $\sum_{i=1}^{n} X_{i}$ oder $\overline{X}$  bei \textbf{hinreichend großem n} normalverteilt sind. Faustregel: \textbf{Je} schiefer die Verteilung der $ X_{i}$ , \textbf{desto} größer muss n sein: 
 \textbf{n>30}: falls die unbekannte Verteilung ohne markanten Ausreißer, aber schief ist (Exponentialverteilung); 
 \textbf{n>15:} falls die unbekannte Verteilung annähernd symmetrisch ist(Binomialverteilung); 
-\textbf{$ n \le 15 $:} falls die unbekannte Verteilung annähernd normalverteilt ist; 
+$ \boldsymbol{ n \le 15 }$: falls die unbekannte Verteilung annähernd normalverteilt ist; 
 \subsection{$\phi$}
 \includegraphics[scale=0.25]{./pic/ZGWPhiVerteilung.png} $ \phi(-a ) = 1 - \phi(a) $; $\phi(a) = 1-\phi(-a) $; 
 $ P(-a < Z < a) = \phi(a) - \phi(-a) = \phi(a) - (1-\phi(a)) = 2\phi(a) -1 $ or $ 1-\phi(-a) - \phi(-a) = 1 -2\phi(-a)$
-\subsection{$\phi^(-1)$}
+\subsection{$\phi^{-1}$}
 \includegraphics[scale=0.25]{./pic/ZGWPhi-1Verteilung.png} $  -x_{p} = x_{1-p} \Leftrightarrow -qnorm(p) = qnorm(1-p) \Leftrightarrow -\phi^{-1}(p) = \phi^{-1}(1-p) $
 \textbf{Zusammenhang}
 \includegraphics[scale=0.25]{./pic/ZGWSigmoidFunction.png} $ \phi^{-1}(p) = x_{p} $; 
@@ -35,4 +35,4 @@ $ Var[\overline{X}] = Var[\frac{1}{n}\sum X_{i}] = \frac{1}{n^2} Var[\sum X_{i}]
 Seien $ X_{i} (i=1, ..., n)$ unabhängige normalverteilte ZV mit Erwartungswert $\mu$ und Varianz $\sigma^2$. Dann gilt:
 \textbf{bei unbekannter Varianz:} $ \frac{\overline{X} -\mu}{\sigma} \sqrt{n} \thicksim N_{0,1}$; 
 $ \frac{(n-1)S^2 = \sum(x-\overline{x})^2}{\sigma^2 \Rightarrow \text{Standardisierung}} \thicksim \chi_{n-1}^{2}$; 
-\textbf{Bei unbekannter Varinanz:} $ \frac{\overline{X}-\mu}{S}\sqrt{n} \thicksim t_{n-1}$; 
+\textbf{Bei unbekannter Varianz:} $ \frac{\overline{X}-\mu}{S}\sqrt{n} \thicksim t_{n-1}$; 
