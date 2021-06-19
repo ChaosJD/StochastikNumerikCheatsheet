@@ -25,4 +25,9 @@ $ H_{0} $ wird angenommen falls $ tg = TG(x_{1}, ..., x_{n}) \in \overline{C} $;
 Der kritische Bereich ergibt sich analog zu den Konfidenzintervallen durch die Vorgabe eines kleinen Signifikanzniveau $ \alpha $ d.h. max. Wahrscheinlichkeit für Fehler 1. Art, mit standardisierter Prüfgröße TG* gilt:
 $ P (TG \in C) \le \alpha  \Leftrightarrow TG^{*} \in ]-\infty; \phi^{-1}(1- \frac{\alpha}{2}) [ \cup ] \phi^{-1}(1-\frac{\alpha}{2}); \infty [$; 
 $ P(TG \in \overline{C}) \ge 1 - \alpha \Leftrightarrow TG^{*} \in [ \phi^{-1}(\frac{\alpha}{2}), \phi^{-1}(1-\frac{\alpha}{2}) ] $; 
-Wird dann $ H_{0} $ verworfen, spricht man von einer siginifikanten Schlussfolgerung. Kann $ H_{0} $ nicht verworfen werden, dann lässt sich keine Aussage über den Fehler 2. Art treffen \& man spricht von einer schwachen Schlussfolgerung.
+Wird dann $ H_{0} $ verworfen, spricht man von einer signifikanten Schlussfolgerung. Kann $ H_{0} $ nicht verworfen werden, dann lässt sich keine Aussage über den Fehler 2. Art treffen \& man spricht von einer schwachen Schlussfolgerung.
+\subsection{Zweiseitiger Gauß Test}
+$ H_{0}: \mu = \mu_{0}  $ gegen $ H_{1}: \mu \neq \mu_{0} $; 
+$ \overline{ X } \sim  N_{ \mu_{0}, \sigma_{0}^2 /n} \Rightarrow \frac{ \overline{X} - \mu_{0} }{ \sigma_{0} } \sqrt{n} \sim N_{0, 1} $; 
+$ P_{ \mu0}( \overline{X} \in C ) \le \alpha \Leftrightarrow |TG| = \frac{ | \overline{X} - \mu_{0} | }{ \sigma_{0} } \sqrt{n} > \phi^{-1}(1-\frac{ \alpha}{2} )$; 
+\textbf{Testentscheidung:}$ H_{0} $ wird abgelehnt, falls $ |TG| > \phi^{-1}(1-\frac{ \alpha }{ 2 } ) $; $ H_{0} $ wird angenommen, falls $ |TG| \le \phi^{-1}(1-\frac{ \alpha }{2} )$
