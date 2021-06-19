@@ -51,7 +51,7 @@ Prüfgröße $ tg = \frac{ \overline{X} -\mu_{0} }{ \sigma_{0} } \sqrt{n} \sim t
 \subsection{p-Wert}
 Wahrscheinlichkeit, bei Zutreffen von $ H_{0} $ den beobachteten Wert tg der Prüfgröße or einen noch stärker von $ \mu_{0} $ abweichenden Wert zu bekommen.
 %Grafik p-Value slide 15+1?
-Der p-Wert zu einer Hypothese $ H_{0} $ ist der kleinste WErt von $ \alpha $, für den $ H_{0} $ noch abgelehnt werden kann. \textbf{Je kleiner} der Wert, \textbf{desto kleiner} ist der Fehler 1. Art \& umso signifikanter ist die Testentscheidung. 
+Der p-Wert zu einer Hypothese $ H_{0} $ ist der kleinste Wert von $ \alpha $, für den $ H_{0} $ noch abgelehnt werden kann. \textbf{Je kleiner} der Wert, \textbf{desto kleiner} ist der Fehler 1. Art \& umso signifikanter ist die Testentscheidung. 
 \textbf{Nice to know} Anhand des p-Werts kann man für beliebige Werte von $ \alpha $ eine Testentscheidung treffen;\\
 Falls $ p-Wert < 1\%:$ sehr hohe Signifikanz\\
 Falls $ 1\% \le p-Wert < 5\%: $ hohe Signifikanz\\
@@ -62,3 +62,15 @@ zum Konfidenzniveau $ 1- \alpha $;
 $ H_{0} $ wird abgelehnt, falls $ \mu_{0} \notin I $; 
 $ H_{0} $ wird angenommen, falls $ \mu_{0} \in I $; 
 Das Konfidenzniveau ist der Annahmebereich von $ H_{0} $ zum Signifikanzniveau $ \alpha $; 
+\subsection{Zusammenfassung klass. Hypo.test}
+Signifikanzniveau $ \alpha $ wird vorgegeben;\\
+$ \alpha $ \& Verteilung der Testgröße unter $ H_{0} $ wir der Ablehnungsbereich ermittelt. \textbf{Je kleiner (größer) } $ \alpha $ , \textbf{desto kleiner (größter) } ist der Ablehnungsbereich; \\
+\textbf{!:} $ \alpha \& C $  hängen \textbf{nicht von} der konkreten Stichprobe ab;\\
+$ H_{0} $ wird abgelehnt, falls der ermittelte Wert der Testgröße (beobachteter Wert) in C liegt. 
+\textbf{!:} Die tg hängt von der konkreten Stichprobe ab. Sie ist eine ZV.
+\subsection{Test mittels p-Wert}
+$ \alpha $ wird vorgegeben.\\
+Berechnung des p-Werts anhand der konkreten Stichprobe mit der Verteilung der Tg unter $ H_{0}  $;\\
+\textbf{!:}Der p-Wert hängt von der konkreten Stichprobe ab, ist eine ZV.\\
+$ H_{0} $ wird abgelehnt, falls $ p-Wert \le \alpha. $;
+
