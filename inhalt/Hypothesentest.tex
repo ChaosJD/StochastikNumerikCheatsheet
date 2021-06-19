@@ -30,4 +30,14 @@ Wird dann $ H_{0} $ verworfen, spricht man von einer signifikanten Schlussfolger
 $ H_{0}: \mu = \mu_{0}  $ gegen $ H_{1}: \mu \neq \mu_{0} $; 
 $ \overline{ X } \sim  N_{ \mu_{0}, \sigma_{0}^2 /n} \Rightarrow \frac{ \overline{X} - \mu_{0} }{ \sigma_{0} } \sqrt{n} \sim N_{0, 1} $; 
 $ P_{ \mu0}( \overline{X} \in C ) \le \alpha \Leftrightarrow |TG| = \frac{ | \overline{X} - \mu_{0} | }{ \sigma_{0} } \sqrt{n} > \phi^{-1}(1-\frac{ \alpha}{2} )$; 
-\textbf{Testentscheidung:}$ H_{0} $ wird abgelehnt, falls $ |TG| > \phi^{-1}(1-\frac{ \alpha }{ 2 } ) $; $ H_{0} $ wird angenommen, falls $ |TG| \le \phi^{-1}(1-\frac{ \alpha }{2} )$
+\textbf{Testentscheidung:} $ H_{0} $ wird abgelehnt, falls $ |TG| > \phi^{-1}(1-\frac{ \alpha }{ 2 } ) $; $ H_{0} $ wird angenommen, falls $ |TG| \le \phi^{-1}(1-\frac{ \alpha }{2} )$
+\subsection{Einseitiger Gauß Test}
+\subsubsection{linksseitig}
+$ H_{0}: \mu \ge \mu_{0} $ gegen $ H_{1}: \mu  < \mu_{0}$
+\subsubsection{rechtsseitig}
+$ H_{0}: \mu \le \mu_{0} $ gegen $ H_{1}: \mu > \mu_{0} $
+\hrule
+$ P_{\mu 0} ( \overline{X} \in C ) \le \alpha \Leftrightarrow TG = \frac{ \overline{ X } - \mu_{0} }{ \sigma_{0} } \sqrt{n} < \phi^{-1} ( \alpha ) $; 
+\textbf{Testentscheidung:} $ H_{0} $ wird abgelehnt falls, $ TG < \phi^{-1} ( \alpha )$; 
+$ H_{0} $ wird angenommen, falls $ TG \ge \phi^{-1} ( \alpha ) $; 
+\includegraphics[scale=0.25]{./pic/EinseitigerGausTest.png}
