@@ -6,6 +6,7 @@ TG = Prüfgröße;
 TG* = standardisierte Prüfgröße; 
 siginifikante Schlussfolgerung = $ H_{0} $ verworfen $\rightarrow$ klassischer Parametertest; 
 schwache Schlussfolgerung = $ H_{0} $ wird nicht verworfen $\rightarrow$ klassischer Parametertest.
+p-Wert = beobachtetes Signifikanzniveau
 \subsection{Null- und Gegenhypothese}
 \textbf{Modell:} Verteilung der Grundgesamtheit or Testgröße \textbf{TG} ( häufig $\overline{x}$ ) ist bekannt bis auf einen Parameter, z.B. $ \mu $, für den eine Hypothese aufgestellt wird.
 $ TG \sim  N_{\mu, \sigma^2}$; 
@@ -41,3 +42,23 @@ $ P_{\mu 0} ( \overline{X} \in C ) \le \alpha \Leftrightarrow TG = \frac{ \overl
 \textbf{Testentscheidung:} $ H_{0} $ wird abgelehnt falls, $ TG < \phi^{-1} ( \alpha )$; 
 $ H_{0} $ wird angenommen, falls $ TG \ge \phi^{-1} ( \alpha ) $; 
 \includegraphics[scale=0.25]{./pic/EinseitigerGausTest.png}
+\subsection{Varianten Gauß Test, $ \sigma^2 $ bekannt, $\mu$ unbekannt}
+Prüfgröße$ tg = \frac{ \overline{X} - \mu_{0} }{ \sigma_{0} }\sqrt{n} $; \\
+\includegraphics[scale=0.25]{./pic/GausTests.png}
+\subsection{t-Test, $ \mu, \sigma^2 unbekannt  $}
+Prüfgröße $ tg = \frac{ \overline{X} -\mu_{0} }{ \sigma_{0} } \sqrt{n} \sim t_{n-1} $
+\includegraphics[scale=0.25]{./pic/tTest.png}
+\subsection{p-Wert}
+Wahrscheinlichkeit, bei Zutreffen von $ H_{0} $ den beobachteten Wert tg der Prüfgröße or einen noch stärker von $ \mu_{0} $ abweichenden Wert zu bekommen.
+%Grafik p-Value slide 15+1?
+Der p-Wert zu einer Hypothese $ H_{0} $ ist der kleinste WErt von $ \alpha $, für den $ H_{0} $ noch abgelehnt werden kann. \textbf{Je kleiner} der Wert, \textbf{desto kleiner} ist der Fehler 1. Art \& umso signifikanter ist die Testentscheidung. 
+\textbf{Nice to know} Anhand des p-Werts kann man für beliebige Werte von $ \alpha $ eine Testentscheidung treffen;\\
+Falls $ p-Wert < 1\%:$ sehr hohe Signifikanz\\
+Falls $ 1\% \le p-Wert < 5\%: $ hohe Signifikanz\\
+Falls $ 5\% \le p-Wert \le 10\%: $ Signifikanz\\
+Falls $ p-Wert > 10\%: $ keine Signifikanz\\
+\subsection{Zusammenhang I \& Hypothesentests zweiseitig}
+zum Konfidenzniveau $ 1- \alpha $; 
+$ H_{0} $ wird abgelehnt, falls $ \mu_{0} \notin I $; 
+$ H_{0} $ wird angenommen, falls $ \mu_{0} \in I $; 
+Das Konfidenzniveau ist der Annahmebereich von $ H_{0} $ zum Signifikanzniveau $ \alpha $; 
