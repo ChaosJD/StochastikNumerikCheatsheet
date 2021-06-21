@@ -2,8 +2,8 @@
 Zu gegebenen Punkten $ ( x_{i}, y_{i} ), i=0, ..., n $ mit $ x_{i} \neq x_{j} $ für $ i \neq  j $ eine Funktion G ( dies ist nicht eindeutig! Abhängig von der Funktionsklasse ), so dass $ G ( x_{i} ) = y_{i}, i=0, ..., n $ (Interpolationsbedingung). Interpolation ist \textbf{ungeeignet} für verauschte Daten. Lösung: Approximation der kleinsten Quadrate.
 
 \subsection{Begriffe}
-Extrapolation $\hat{=} $ Näherungwerte für x-Werte außerhalb der Stützstellen
-
+Extrapolation $\hat{=} $ Näherungwerte für x-Werte außerhalb der Stützstellen;\\
+Dividierende Differenzen $\hat{=}$ Koeffizienten $ c_{i} $ lassen sich rekursiv durch wiederholte Bildung von "Differenzquotienten" berechnen
 \subsection{Vandermonde/klassisch}
 Unterschiedliche Darstellungen für ein Interpolationspolynom $ G(x) = p_{n}(x) $ vom Grad $ n $ haben unterschiedliche Eigenschaften bei der numerischen Berechnung.\textbf{Monombasis:} $ x^{0}, x^{1}, x^{2}, x^{3}, ...; p_{n}(x) = a_{n} x^n + ... + a_{1} x^{1} + a_{0} x^{0} $; 
 \textbf{Ziel:} Bestimmung d. Koeffizienten $ a_{0}, a_{1}, ..., a_{n} $ sodass $ p_{n}( x_{i} ) = y_{i} = a_{n} x_{i}^n + ... + a_{1} x_{i}^1 +a_{0} x^{0} $ für i = 0, ..., n; 
@@ -23,6 +23,19 @@ Darstellung des Interpolanten, die auf ein gestaffeltes LGS führt \& einfache H
 $p_{n}(x) = c_{0} + c_{1} ( x-x_{0} ) + ... + \underbrace {c_{n} ( x-x_{0} ) ( x-x_{1} ) ... ( x-x_{n-1} ) } $\\
 Polynom vom Grad n\\
 Das Resultierende LGS für die Koeffizienten $ c_{i} $ hat gestaffelte Form.
+\textbf{Interpolationsbedingungen?}\\
 \textbf{Vorteile:} Rechenaufwand $ \mathcal O ( n^{2} ) $ Gleitpunktoperationen; Hinzufügen weiterer Stützstellen ohne großen Aufwand. Andere Koeffizienten bleiben unverändert.
 
 \subsection{Dividierende Differenzen}
+\includegraphics[scale=0.25]{./pic/DividierendeDifferenzen.png}
+
+\subsection{Effizienz}
+\subsubsection{klasisch}
+$ p_{n} (x) = a_{n} x^{n} + ... + a_{0} $; 
+\textbf{Aufwand:} 2n-1 Mult.
+\subsubsection{Horner Schema}
+$ p_{3} (x) = a_{3} x^{3} + a_{2} x^{2} + a_{1} + a_{0} = (( a_{3} + a_{2} ) x + a_{1} )x+ a_{0} $; 
+Allg.: $ p_{n} (x) = ( ... ( a_{n} x + a_{n-1} ) x + ... + a_{1} ) x + a_{0} $; 
+\textbf{Aufwand:} n Mult.
+
+\subsection{Interpolationsfehler}
