@@ -39,3 +39,11 @@ Allg.: $ p_{n} (x) = ( ... ( a_{n} x + a_{n-1} ) x + ... + a_{1} ) x + a_{0} $;
 \textbf{Aufwand:} n Mult.
 
 \subsection{Interpolationsfehler}
+Falls $ f $ hinreichend glatt ist \& $ p_{n} $ das eindeutige Interpolationspolynom von Gradn $ n $, dann gilt fürn den Interpolationsfehler:
+$ f(x) - p_{n}(x) = \underbrace{ \frac{ f^{ ( n+1 ) }( \theta ) }{ ( n+1) ! } ( x-x_{0} )...( x-x_{n} ) } $ mit $ \theta \in [ x_{0}; x_{n} ]  $\\
+Vergleichbar zum Restglied bei der Taylorreihenentwicklung; 
+\textbf{Bemerkung:} $ \theta $ unbekannt, daher nur Fehlerabschätzung; 
+Fehler ist Abhängig von der Verteilung der Stützstellen; 
+Der Fehler ist bei großen n an den Intervallrändern deutlich größer, als in der Intervallmitte
+\subsubsection{Wahl der Stüztstellen}
+Runge Funktion $ (f) $
