@@ -19,3 +19,10 @@ Jede Basisfunktion $ L_{k}(x) $ ist ein Polynom vom Grad $ \le n $;
 \textbf{Bemerkung:} Findet Anwendung bei Numerischer Integration; Wenn Stützstellen $ x_{i}  $ gleich bleiben \& nur $ y_{i} $ ändern $ \Rightarrow $ keine Neuberechnung; Rechenaufwand $ \mathcal O ( ( n +1)^{2} ) $; Kommen neue Stützpunkte hinzu $ \Rightarrow $ Neuberechnung\textbf{!}; Die Interpolationspolynome liefern nur sinnvolle \textbf{ Näherungswerte } für x-Werte, die zwischen den gegebenen Stützstellen liegen; Extrapolation ( Näherungwerte für x-Werte außerhalb der Stützstellen ) kann zu großen Abweichungen führen.
 
 \subsection{Newton}
+Darstellung des Interpolanten, die auf ein gestaffeltes LGS führt \& einfache Hinzunahme weiterer Punkte erlaubt.
+$p_{n}(x) = c_{0} + c_{1} ( x-x_{0} ) + ... + \underbrace {c_{n} ( x-x_{0} ) ( x-x_{1} ) ... ( x-x_{n-1} ) } $\\
+Polynom vom Grad n\\
+Das Resultierende LGS für die Koeffizienten $ c_{i} $ hat gestaffelte Form.
+\textbf{Vorteile:} Rechenaufwand $ \mathcal O ( n^{2} ) $ Gleitpunktoperationen; Hinzufügen weiterer Stützstellen ohne großen Aufwand. Andere Koeffizienten bleiben unverändert.
+
+\subsection{Dividierende Differenzen}
