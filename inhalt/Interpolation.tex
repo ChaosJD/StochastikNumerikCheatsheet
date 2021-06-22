@@ -56,5 +56,24 @@ approx $\hat{=}$ lin Interpolation;
 Spline $\hat{=}$ Spline interpolation; 
 Bibliotheken für Polynominterpolation;
 \subsection{Spline}
-Jede Funktion $ S_{i} $ ist ein Polynom vom Gradn $ \le k $ ; 
+%Hinreichend glatte (( k -1 ) - mal stetig differenzierbare ) \& abschnittsweise aus Polynomen zusammengesetzte Funktion $ \hat{ = } $ Splines vom Grad $ k $ ( meist k = 2 or k =3 ).
+Jede Funktion $ S_{i} $ ist ein Polynom vom Grad  $ n \le k $ ; 
 $ S(x) $ ist $ ( k -1 ) $ - mal stetig differenzierbar, d.h. für alle $ x_{i} ( i = 1, ..., n-1 ) $ gilt: $ S_{ i-1 } ( x_{ i } ) = S_{ i } ( x_{i} ) $; 
+\subsubsection{Kubisch}
+\textbf{Ansatz:} $ S_{ i } = a_{ i } + b_{ i } ( x- x_{ i } ) + c_{ i } (x-x_{i})^{2} + d_{i} (x-x_{i})^{3}$; 
+\textbf{Gleichungssystem:} 4n Parameter $ a_{i}, b_{i}, c_{i}, d_{i} ( i=0, ..., n-1) $; 
+\textbf{2n Interpolationsbedingungen:} am Rand je nur eine. $ S_{i} x_{i} = y_{i}$; 
+$ Si (x_{i+1}) = y_{i+1}$ für $  ( i= 0, 1, ..., n-1) \Rightarrow $ Stetigkeit; 
+\textbf{Stetigkeit der 1. Abl:} 
+$ S_{i}^{'} (x_{i+1}) = S_{i+1}^{'}(x_{i+1}) $; 
+$ \Leftrightarrow S_{i}^{'}(x_{i+1}) - S_{i+1}^{'} ( x_{i+1}) = 0 $; 
+für $ i = 0, 1, ..., n-2 $; 
+\textbf{Stetigkeit der 2. Abl.:} 
+$ S_{i}^{''} (x_{i+1}) = S_{i+1}^{''} (x_{i+1}) $; 
+$ S_{i}^{''}(x_{i+1}) - S_{i+1}^{''}(x_{i}+1) = 0 $ ; für $ i=0,1,...,n-2) $; 
+\textbf{natürlicher Randbedingungen:}
+$ S_{0}^{''}(x_{0}) = 0 $; 
+$ S_{n-1}^{''}(x_{n}) = 0 $; 
+nach geschickter Umformung der Gleichungen hat das LGS Tridiagonalform. 
+\textbf{Rechenaufwand} $ \mathcal O ( n ) $ Gleitpunktoperationen.
+
