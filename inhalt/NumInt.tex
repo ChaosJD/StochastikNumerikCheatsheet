@@ -1,0 +1,19 @@
+\section{NumInt}
+Verbesserung der Näherung: Aufteilung in kleine Teilintervalle \& Summe von Rechtecksflächen bilden; Interpolations mit Polynom höheren Gredes durch diskrete Punkte.
+\subsection{Def}
+$ p_{k} \hat{=} $ Interpolationspolynom
+
+\subsection{Newton-Cotes Regeln}
+Das Intergral des $ p_{k} $ diens al Appr. für das Int. von f(x); 
+$ \int_{0}^{1} f(t) dt \approx \int_{0}^{1} p_{k} (t) dt =  \sum_{j=0}^{k} \alpha_j f( t_{j} ) $ Das Interpolationspolynom muss nicht explizit aufgestellt werden, es dient vorab der Bestimmung der Gewichte $ \alpha_{j} $; 
+$ \int_{0}^{1} p_{k}(t) = \int_{0}^{1} \sum f( t_{j} ) L_{j} (t) dt = \sum f ( t_{j} ) \int_{0}^{1} L_{j} (t) dt $
+\subsubsection{Trapezregel}
+$ T_{1}: $ 
+$ \int_{0}^{1} f (t) dt \approx \frac{1}{2} ( f(0) + f(1) ) $; 
+$ \int_{a}^{b} f (x) dx \approx \frac{(b-a)}{2} (f(a) + f(b) ) $;
+\subsubsection{SimpsonRegel}
+$ S_{1}: $ 
+$ \int_{0}^{1} f (t) dt \approx \frac{1}{6} ( f(0) + 4f(0.5) + f(1) ) $; 
+$\int_{a}^{b} f (x) dx \approx \frac{b-a}{6} ( f(a) + 4f( \frac{a+b}{2}) + f(b) ) $; 
+Für n = 1: $\frac{( b-a )}{2\cdot1} \frac{1}{3} ( f(a) + 4f( \frac{a+b}{2}) + f(b) ) $; 
+Für n allg.: $ \frac{( b-a) }{2n}\frac{1}{3} ( f(a) + 4(a+h) + ... + 4f(b-h)+ f(b) ) $ 
