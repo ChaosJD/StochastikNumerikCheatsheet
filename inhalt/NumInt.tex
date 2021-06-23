@@ -3,7 +3,9 @@ Verbesserung der Näherung: Aufteilung in kleine Teilintervalle \& Summe von Rec
 \subsection{Def}
 $ p_{k} \hat{=} $ Interpolationspolynom; 
 $ I_{n} \hat{=} $ Quadraturformel; 
-$ K \hat{=} $ Fehlerkonstante des Verfahrens. 
+$ K \hat{=} $ Fehlerkonstante des Verfahrens.; 
+Singularität $\hat{=}$ isolierter Punkt, der ungewöhnliches Verhalten zeigt; 
+
 \subsection{Newton-Cotes}
 Das Intergral des $ p_{k} $ diens al Appr. für das Int. von f(x); 
 $ \int_{0}^{1} f(t) dt \approx \int_{0}^{1} p_{k} (t) dt =  \sum_{j=0}^{k} \alpha_j f( t_{j} ) $ Das Interpolationspolynom muss nicht explizit aufgestellt werden, es dient vorab der Bestimmung der Gewichte $ \alpha_{j} $; 
@@ -46,4 +48,12 @@ Der Fehler ist proportional zu $ h^2 $; Eine Halbierung der Intervalllänge redu
 $ |e_{T_n} | \le \frac{ h^2 }{12} (b-a) max_{a \le x \le b} | f^{''} (x) |, K =\frac{1}{12}, h = \frac{ b-a }{n} $
 
 \subsection{Fehler $ S_{n} $}
+Der Fehler ist proportional zu $ h^4 $; Eine Halbierung der Intervalllänge reduziert den Fehler um den Faktor $ \frac{1}{16} $;
 $ | e_{Sn} | \le \frac{ h^{4} }{180} (b-a) max_{a \le x \le b} | f^{4} (x) |, h= \frac{(b-a)}{2n}, K = \frac{1}{180} $
+\subsection{Grenzen NC}
+viele äquidistante Knoten $\rightarrow$ Gewichte negativ $\rightarrow$ Verfahren instabil; 
+geschlossene NCR $\rightarrow$ Funktionsauswertung an RB $\rightarrow$ Problem mit Singularitäten.
+größtmögliche Ordnung unerreichbar wegen äquidistanten Knoten; 
+\textbf{Lösung:} 
+
+\subsection{Gauß Quadratur}
