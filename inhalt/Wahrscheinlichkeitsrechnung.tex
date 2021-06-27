@@ -14,7 +14,7 @@
   \subsection{Wahrscheinlichkeit}
   $0 \le P(E) \le 1$; P($\Omega$) = 1;\\
   P($\bigcup_{i=1}^{\infty}) = \sum_{i=1}^{\infty}$ P($E_{i}$), falls $E_{i} \cap E_{j} = \emptyset$ für $i \neq j$\\
-    \subsubsection{Satz 2.1}
+    \subsection{Satz 2.1}
     P($\overline{E}$) = 1 -P(E)\\
     P($E \cup F$) = P(E)+ P(F) - P($E \cap F$)
   \textbf(Übungsaufgabe!!! Ergänzen)\\
@@ -38,16 +38,16 @@
 %  \textbf{ohne Beachtung der Reihenfolge, mit Zurücklegen} $\binom{n+k-1}{k}$
   \subsection{Bedingte Wahrscheinlichkeit}
   $P(E|F) = P_{F}(E) = \frac{|E \cap F| }{|F|} = \frac{P(E\cap F)}{P(F)}$
-  \subsubsection{Satz 2.2}
+  \subsection{Satz 2.2}
   $P(E \cap F) = P(E|F) \cdot P(F)$\\
   $P(E \cap F) = P(F|E) \cdot P(E)$\\
   	\includegraphics[scale=0.2]{./pic/BedingteWahrscheinlichkeit.png}
-  	\subsubsection{Satz der totalen Wahrscheinlichkeit}
+  	\subsection{Satz der totalen Wahrscheinlichkeit}
   	Sei $\Omega = \bigcup_{i=1}^{n} E_{i}$ mit $E_{i} \cap E_{j} =  \varnothing$ für $i \ne j$ d.h. die Ereignisse bilde eine disjunkte Zerlegung bzw. eine Partition von $\Omega$. Somit gilt:\\
   	$P(F) = \sum_{i=1}^{n} P(F \cap E_{i}) = \sum_{i=1}^{n} P(F|E_{i}) \cdot P(E_{i})$\\
   	Summe der Äste des Wahrscheinlichkeitsbaums zu allen Schnitten $F \cap E_{i}$
   	\includegraphics[scale=0.25]{./pic/SatzTotalerWahrscheinlichkeit.png}
-  	\subsubsection{Vierfeldertafel}
+  	\subsection{Vierfeldertafel}
   	$ P(F) = P(F \cap E ) + P(F \cap \overline{E}) $\\
   	$ P(\overline {F}) = P(\overline{F} \cap E) + P(\overline{F} \cap E) $\\
   	\includegraphics[scale=0.25]{./pic/Vierfeldertafel}
@@ -57,12 +57,12 @@
   	$ = P(F) - P(F \cap \overline{E}) $
   	$ = P(E) - P(\overline{F} \cap E) $; 
   $ P(\overline{F} | E) = 1 - P(F | E) $
-  \subsubsection{Formel von Bayes}
+  \subsection{Formel von Bayes}
   Hilfreich, wenn man man $P( F | E_{i} )$ kennt, aber nicht $P(E_{k}|F)$
   \textbf{Satz 2.4}
   $P(E_{k} | F) = \frac{ P(F | E_{k}) \cdot P(E_{k})}{ \underbrace{\sum_{i=1}^{n}P(F|E_{i}) \cdot P(E_{i})}}$\\
 \textbf{Nur Nenner!}P(F) aus dem Satz der totalen Wahrscheinlichkeit.
-  \subsubsection{Stochastische Unabhängigkeit}
+  \subsection{Stochastische Unabhängigkeit}
   \textbf{Übung}
   Die Ereignisse E und F heißen (stochastisch) unabhängig, wenn die Information über das Eintreten des einen Ereignisses die Wahrscheinlichkeit für das Eintreten des anderen Ereignisses nicht ändert, d.h. falls\\
   $\underbrace{P(E|F)}= P(E)  \text{ or }   P(E\cap F) = P(E) \cdot P(F)$\\
@@ -72,16 +72,12 @@
   $\circ  E, \overline{F}$;  
   $\circ  \overline{E} , F$;  
   $\circ \overline{E}, \overline{F}$ unabhängig\\
-  \textbf{Bemerkung}
-  \begin{itemize}
-  	\item Stochastische Unabhängigkeit bedeutet nicht notwendigerweise eine kausale Abhängigkeit
-  	\item Veranschaulichung mit Venn Diagramm
+  \textbf{Bemerkung}\\
+  	$ \circ $ Stochastische Unabhängigkeit bedeutet nicht notwendigerweise eine kausale Abhängigkeit; 
+  	$ \circ $ Veranschaulichung mit Venn Diagramm
   	  \includegraphics[scale=0.23]{./pic/StochastischeUnabhängigkeit.png}
-  	  \includegraphics[scale=0.23]{./pic/StochastischeAbhängigkeit.png}
-  	\item $A, B \ne \varnothing$ und $A \cap B  = \varnothing$\\
+  	  \includegraphics[scale=0.23]{./pic/StochastischeAbhängigkeit.png}\\
+  	$\circ$ $A, B \ne \varnothing$ und $A \cap B  = \varnothing$\\
   	$P(A\cap B) \stackrel{?}{=} P(A) \cdot P(B)$\\
-  	$\varnothing \ne P(A) \cdot P(B)$ da P(A) > 0 und P(B)> 0\\
+  	$ \varnothing \ne P(A) \cdot P(B)$ da P(A) > 0 und P(B)> 0\\
   	=> A, B stochastisch abhängig
-  \end{itemize}
-  
-  

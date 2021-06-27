@@ -1,23 +1,19 @@
 \section{Zufallsvariable}
 Abbildung des \textbf{abstrakte} Ergebnisraums $\Omega$ auf $\mathbb{R}$.
-Eine Abbildung $X: \Omega \rightarrow \mathbb{R}$, $\omega \mapsto X(\omega)$ = heißt Zufallsvariable (ZV). x $\in$ R. heißt Realisation der ZV X.
-  \begin{itemize}
-    \item Diskrete ZV: $X(\Omega) = {x_{1}, ..., x_{2}} (n \in \mathbb{N})$; z.B. X = \dq Augensumme beim Würfeln \dq
-    \item Stetige ZV: $X(\Omega) \subseteq \mathbb{R}$; \dq z.B. Körpergröße eines Menschen\dq
-  \end{itemize}
+Eine Abbildung $X: \Omega \rightarrow \mathbb{R}$, $\omega \mapsto X(\omega)$ = heißt Zufallsvariable (ZV). x $\in$ R. heißt Realisation der ZV X.\\
+    $\circ$ Diskrete ZV: $X(\Omega) = {x_{1}, ..., x_{2}} (n \in \mathbb{N})$; z.B. X = \dq Augensumme beim Würfeln \dq \\
+    $\circ$ Stetige ZV: $X(\Omega) \subseteq \mathbb{R}$; \dq z.B. Körpergröße eines Menschen\dq
 \subsection{Verteilungsfunktion-allg.}
-Die Wahrscheinlichkeit P(B) für ein Ereignis B in $ \mathbb{R} $ wird zurückgefürht auf die Wahrscheinlichkeit der entsprechenden Ereignisse in 
+Die Wahrscheinlichkeit P(B) für ein Ereignis B in $ \mathbb{R} $ wird zurückgeführt auf die Wahrscheinlichkeit der entsprechenden Ereignisse in 
 $ \Omega $. Für jedes $ X \in \mathbb{R} $  ist die Verteilungsfunktion F: $ \mathbb{R} \rightarrow [0,1] $ einer ZV X definiert durch:\\
-	F(x) = P(X $ \leq $ x )
-\begin{itemize}
-	\item $ 0 \leq F(x) \leq 1 $
-	\item $\lim\limits_{x\to-\infty} F(X)= 0 \, \lim\limits_{x\to\infty} F(x) = 1$
-	\item monoton wachsend
-	\item $P(X > x) = 1 - F(x)$
-	\item $P(a < X \leq b) = F(b) - F(a)$
-\end{itemize}
+	F(x) = P(X $ \leq $ x )\\
+  $\circ$ $ 0 \leq F(x) \leq 1 $\\
+  $\circ$ $\lim\limits_{x\to-\infty} F(X)= 0 \, \lim\limits_{x\to\infty} F(x) = 1$\\
+  $\circ$ monoton wachsend\\
+  $\circ$ $P(X > x) = 1 - F(x)$\\
+  $\circ$ $P(a < X \leq b) = F(b) - F(a)$
 \subsection{Diskrete ZVs}
-Für eine diskrete ZV X mit $X(\Omega) = {x_{1}, ..., x_{n}}$ ( n endlich oder abzählbar unendlich) ist die Wahrscheinlichkeitsfunktion definiert durch:\\
+Für eine diskrete ZV X mit $X(\Omega) = {x_{1}, ..., x_{n}}$ ( n endlich oder abzählbar unendlich) ist die Wahrscheinlichkeitsfunktion definiert durch:
 \begin{equation}
 p(x) =
 \begin{cases}
@@ -25,92 +21,74 @@ p(x) =
 	0, sonst\\
 \end{cases}
 \end{equation}
-\textbf{Es gilt:}
-\begin{itemize}
-	\item $F(x) = (P(X \leq x) = \sum_{x_{i}\leq x} p(x_{i})$
-	\item F(x) ist eine rechtseitig stetige \textbf{Treppenfunktion} mit \textbf{Sprüngen} bei der Realisation von $x_{i}$.
-\end{itemize}
-\subsection{Stegite ZVs}
+\textbf{Es gilt:}\\
+	$\circ$ $F(x) = (P(X \leq x) = \sum_{x_{i}\leq x} p(x_{i})$\\
+	$\circ$ F(x) ist eine rechtseitig stetige \textbf{Treppenfunktion} mit \textbf{Sprüngen} bei der Realisation von $x_{i}$.
+\subsection{Stetige ZVs}
 Stetige ZV X ist die Wahrscheinlichkeitsdichte f $ f : \mathbb{R} \rightarrow [0,\infty[$ definiert durch\\
 $P(a < X < b) = \int_{a}^{b} f(x) dx$\\
-\textbf{Es gilt:}
-\begin{itemize}
-	\item $F(x) = P(X \leq x) = \int_{-\infty}^{x} f(t) dt$ und $F'(x) = f(x)$
-	\item F(x) ist stetig \& $P(a < X \leq b) = P(a \leq X \leq b)$ wegen $P(X = a) = 0$
-\end{itemize}
+\textbf{Es gilt:}\\
+  $\circ$ $F(x) = P(X \leq x) = \int_{-\infty}^{x} f(t) dt$ und $F'(x) = f(x)$\\
+  $\circ$ F(x) ist stetig \& $P(a < X \leq b) = P(a \leq X \leq b)$ wegen $P(X = a) = 0$
 \subsection{Verteilungsfunktion}
 $\int_{\textbf{Untergrenze}}^{x}$ Es wird normal mit - Integriert.
 \subsection{Zusammenfassung}
-\subsubsection{Diskrete ZV}
-\begin{itemize}
-	\item Wahrscheinlichkeitsverteilung p(x) $\sum_{i}^{n} p(x_{i}) = 1 x_{i}$ ist Realisation der ZV.
-	\item Verteilungsfunktion F(x) ist rechtsseitig  stetige \textbf{Treppenfunktion}. \textbf{Sprunghöhen:}$P(X = x_{i}) = F(x_{i}) - \lim\limits_{x \to x_{i}-} \ne 0$
-	\item $P(a < X \le b) = F(b)- F(a) \ne P(a \le X \le b)$
-\end{itemize}
-\subsubsection{Stetige ZV}
-\begin{itemize}
-	\item Dichtefunktion fx $\int_{-\infty}^{\infty} f(x) dx = 1$
-	\item Verteilungsfunktion $F(x)$ ist stetig mit $F'(x) = f(x); P(X = x_{i}) = 0$
-	\item $P(a < X \leq b ) = F(b) - F(a) = P( a \leq X \leq b) = F(a \leq X < b) = P(a < X < b)$
-\end{itemize}
+\subsection{Diskrete ZV}
+  $\circ$ Wahrscheinlichkeitsverteilung p(x): $\sum_{i}^{n} p(x_{i}) = 1$; 
+    $x_{i}$ ist Realisation der ZV.\\
+  $\circ$ Verteilungsfunktion F(x) ist rechtsseitig  stetige\\ \textbf{Treppenfunktion}. \textbf{Sprunghöhen:}$P(X = x_{i}) = F(x_{i}) - \lim\limits_{x \to x_{i}-} F(x) \ne 0$\\
+  $\circ$ $P(a < X \le b) = F(b)- F(a) \ne P(a \le X \le b)$
+\subsection{Stetige ZV}
+  $\circ$ Dichtefunktion fx $\int_{-\infty}^{\infty} f(x) dx = 1$\\
+  $\circ$ Verteilungsfunktion $F(x)$ ist stetig mit $F'(x) = f(x); P(X = x_{i}) = 0$\\
+  $\circ$ $P(a < X \leq b ) = F(b) - F(a) = P( a \leq X \leq b) = F(a \leq X < b) = P(a < X < b)$
 \subsection{Erwartungswert}
-Der Erwartungswert $E[X] = µ$ einer ZV X ist der \textbf{Schwerpunkt} ihrer Verteilung \underline{or} der durchschnittliche zu erwartende Wert der ZV.
-\begin{itemize}
-  \item diskrete ZV: $E[X] = \sum_{i=1}^{n} x_{i} \cdot p(x_{i})$
-  \item stetige ZV: $E[X] = \int_{-\infty}^{\infty} x \cdot f(x) dx$
-\end{itemize}
-ZV ist konstant. E[X] verhält sich linear. Eigenschaften von $E[X]$:
-\begin{itemize}
-  \item $E[b] = b$
-  \item $E[aX + b] = aE[X] + b$
-  \item $E[\underbrace{X_{i} + ... + X_{n}}] = \sum_{i=1}^{n} E[X_{i}]$
-  \item $\sum_{i=1}^{n} x_{i}$
-\end{itemize}
-\subsubsection{Satz 3.1}
-Sei Y = g(X) eine Funktion der ZV X. Dann gilt:
-\begin{itemize}
-  \item für diskrete ZV:$E[g(X)] = \sum_{i=1}^{n} g(x) \cdot p(x_ {i})$
-  \item für stetige ZV: $E[g(X)] = \int_{- \infty}^{\infty} g(x) \cdot f(x) dx$. Das vertauschen von E und g nur bei \textbf{linearen} Funktionen möglich. $\Rightarrow$ g(E[X])
-\end{itemize}
+Der Erwartungswert $ E[X] = \mu $ einer ZV X ist der \textbf{Schwerpunkt} ihrer Verteilung \underline{or} der durchschnittliche zu erwartende Wert der ZV.\\
+  $\circ$ diskrete ZV: $E[X] = \sum_{i=1}^{n} x_{i} \cdot p(x_{i})$\\
+  $\circ$ stetige ZV: $E[X] = \int_{-\infty}^{\infty} x \cdot f(x) dx$\\
+ZV ist konstant. E[X] verhält sich linear. Eigenschaften von $E[X]$:\\
+  $\circ$ $E[b] = b$\\
+  $\circ$ $E[aX + b] = aE[X] + b$\\
+  $\circ$ $E[\underbrace{X_{i} + ... + X_{n}}] = \sum_{i=1}^{n} E[X_{i}]$\\
+  $\circ$ $\sum_{i=1}^{n} x_{i}$
+\subsection{Satz 3.1}
+Sei Y = g(X) eine Funktion der ZV X. Dann gilt:\\
+  $\circ$ für diskrete ZV:$E[g(X)] = \sum_{i=1}^{n} g(x) \cdot p(x_ {i})$\\
+  $\circ$ für stetige ZV: $E[g(X)] = \int_{- \infty}^{\infty} g(x) \cdot f(x) dx$. Das vertauschen von E und g nur bei \textbf{linearen} Funktionen möglich. $\Rightarrow$ g(E[X])
 \subsection{Varianz}
 Die Varianz einer ZV X mit µ ist ein quadratisches Streungsmaß. $\sigma^2 = Var[X] = E[\underbrace{(X - µ)^2}] \stackrel{\text{falls x stetig}}{=} \int_{-\infty}^{\infty} (x-\mu)^2 \cdot f(x)$\\
 g(X)\\
-Die Standardabweichung $\sigma = \sqrt{Var[X]}$ hat im Gegensatz zur Varianz die gleiche Dimension von die ZV X.
-\begin{itemize}
-  \item $Var[b] = 0$
-  \item $Var[aX + b] = a^2 Var[X]$
-\end{itemize}
-\subsubsection{Satz 3.2}
+Die Standardabweichung $\sigma = \sqrt{Var[X]}$ hat im Gegensatz zur Varianz die gleiche Dimension von die ZV X.\\
+  $\circ$ $Var[b] = 0$\\
+  $\circ$ $Var[aX + b] = a^2 Var[X]$
+\subsection{Satz 3.2}
 $Var[X] = E[X^2] - (E[X])^2$ \textbf{Beim Minuend wird beim Erwartungswert nur das einfach stehende x quadriert \underline{nicht} f(x)!!!}
 \subsection{Z-Transformation, Standardisierung}
 Sei X eine ZV mit µ und $\sigma$. Dann ist $Z = \frac{X - \mu}{\sigma} = \frac{x}{\sigma} - \frac{\mu (konstant)}{\sigma}$ 
 \subsection{Kovarianz}
-Eigenschaften:
-\begin{itemize}
-	\item $Cov[X, Y] = Cov[Y,X]$
-	\item $Cov[X, X] = Var[X]$
-	\item $Cov[aX, Y] = a Cov[X,Y]$
-\end{itemize}
+Eigenschaften:\\
+  $\circ$ $Cov[X, Y] = Cov[Y,X]$\\
+  $\circ$ $Cov[X, X] = Var[X]$\\
+  $\circ$ $Cov[aX, Y] = a Cov[X,Y]$\\
 Die Kovarianz zweier ZV (X, Y) ist definiert durch
 $Cov[X, Y] = E[(X - E[X])(Y-E[Y])$
 Die Kovarianz beschreibt die Abhängigkeit zweier ZV X und Y. \textbf{Je} stärker diese Korrelieren, \textbf{desto} (betragsmäßig) größer ist die Kovarianz. Falls $X, Y \text{stochastisch unabhängig} \Rightarrow Cov[X, Y] = 0$ 
 \subsection{Satz 3.3}
 $Cov[X, Y] = E[XY] - E[X] \cdot E[Y]$\\
-\subsubsection{Varianz einer Summe von ZV}
-\begin{itemize}
-	\item $Var[X_{i} + ... + X_{n}] = \sum_{i=1}^{n} \sum_{j=1}^{n} Cov[X_{i}, X_{j}]$;
-	$Var[X_{1} + X_{2}] = Var[X_{1}] + Var[X_{2}] + 2Cov[X_{1}, X_{2}]$
-	\item Falls $X_{i} , X_{j}$ paarweise unabhängig \textbf{!!!}: $Var[X_{1} + ...+ X_{n}] = \sum_{i=1}^{n} Var[X_{i}]$
-\end{itemize}
+\subsection{Varianz einer Summe von ZV}
+  $\circ$ $Var[X_{i} + ... + X_{n}] = \sum_{i=1}^{n} \sum_{j=1}^{n} Cov[X_{i}, X_{j}]$; 
+  $Var[X_{1} + X_{2}] = Var[X_{1}] + Var[X_{2}] + 2Cov[X_{1}, X_{2}]$
+  $\circ$ Falls $X_{i} , X_{j}$ paarweise unabhängig \textbf{!!!}: $Var[X_{1} + ...+ X_{n}] = \sum_{i=1}^{n} Var[X_{i}]$
 \subsection{Overview µ $\sigma$}
-\subsubsection{E[X]}
-$E[aX + b] = AE[X]+b;E{X_{1}+ ...+ E_{n}} = \sum_{i=1}^{n} E[X_{i}];$\\
+\subsection{E[X]}
+$ E[aX + b] = aE[X]+b $; 
+$ E[X_{1}+ ...+ E_{n}] = \sum_{i=1}^{n} E[X_{i}]$\\
 Falls $X_{1}, X_{2}$ unabhängig:\\
 $E[X_{i}] = \mu => E[\overline{X}] = E[\frac{1}{n}(X_{1} + ...+ X_{n})] =  \frac{1}{n}\sum_{i=1}^{n} \underbrace{E[x_{i}]} = \frac{1}{n}\cdot n \cdot \mu = \mu$\\
 $\mu$\\
-\subsubsection{Varianz}
+\subsection{Varianz}
 $Var[aX + b] = a\textcolor{red}{^2}Var[X]$\\
-Falls $X_{i}, X_{j}$ parweise unabhängig:\\
+Falls $X_{i}, X_{j}$ paarweise unabhängig:\\
 $Var[X_{1} + ... + X_{n}] = \sum_{i=1}^{n} Var[X_{i}]$\\
 $Var[X_{i}] = \sigma^2 => Var[\overline{X}] = Var[\frac{1}{n}(x_{1} + ... + x_{n})] = \frac{1}{n^2} \sum_{i=1}^{n} Var[X_{i}] = \frac{1}{n^2} \cdot n \cdot \sigma^2 = \frac{\sigma^2}{n}$
 \subsection{Quantile}

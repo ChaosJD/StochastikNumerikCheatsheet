@@ -21,15 +21,13 @@ $  -x_{p} = x_{1-p} \Leftrightarrow -qnorm(p) = qnorm(1-p) \Leftrightarrow -\phi
 \textbf{Zusammenhang}
 \includegraphics[scale=0.25]{./pic/ZGWSigmoidFunction.png} $ \phi^{-1}(p) = x_{p} $; 
 \textbf{Aufgabentypen:} 
-Seien $ X_{i} $ i.i.d. ZV mit $\mu$ und $ \sigma^2 $, aber unbekannter Verteilung. Dann sind $ Z_{1} = \frac{\sum X_{i}-n\mu}{\sqrt{n}\sigma}$ und $Z_{2} = \frac{\overline{X}-\mu}{\sigma} $  näherungsweise standardnormalverteilt.
-\begin{itemize}
-	\item Es lassen sich Wahrscheinlichkeiten für $\sum X_{i}, \overline{X}, Z_{1}$ oder $ Z_{2} $ berechnen.
-	\item Es lässt sich \textcolor{red}{n} bestimmen, so dass, zu vorgegebener Schranke $ k $ und Wahrscheinlichkeit $ p $ gilt: $ P(Z_{i} > k) \geq p $ or $ P(-k \leq Z_{i} \leq k) \geq p $
-\end{itemize}
-\subsection{Stichprobenverteilungen für normalverteilte Grundgesamtheiten}
-\subsubsection{Stichprobenmittel}
+Seien $ X_{i} $ i.i.d. ZV mit $\mu$ und $ \sigma^2 $, aber unbekannter Verteilung. Dann sind $ Z_{1} = \frac{\sum X_{i}-n\mu}{\sqrt{n}\sigma}$ und $Z_{2} = \frac{\overline{X}-\mu}{\sigma} $  näherungsweise standardnormalverteilt.\\
+	$\circ$ Es lassen sich Wahrscheinlichkeiten für $\sum X_{i}, \overline{X}, Z_{1}$ oder $ Z_{2} $ berechnen.\\
+	$\circ$ Es lässt sich \textcolor{red}{n} bestimmen, so dass, zu vorgegebener Schranke $ k $ und Wahrscheinlichkeit $ p $ gilt: $ P(Z_{i} > k) \geq p $ or $ P(-k \leq Z_{i} \leq k) \geq p $
+\subsection{Stichprobenvert.normalvert.\\Grundgesamt.}
+\subsection{Stichprobenmittel}
 Die Stichprobenfunktion $ \overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_{i} $ ist eine erwartungstreue Schätzfunktion für Erwartungswert $ \mu $, d. h.$E[\overline{X}] = \mu$
-\subsubsection{Stichprobenvarianz}
+\subsection{Stichprobenvarianz}
 Die Stichprobenfunktion $ S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_{i} - \overline{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X_{i}^2 - n\overline{X}^2)$ist eine erwartungstreue Schätzfunktion für die Varianz $\sigma^2$, d. h. $E[S^2] =\sigma^2$; 
 $ E[\overline{X}] = E[\frac{1}{n}\sum X_{i}] = \frac{1}{n} E[\sum X_{i}] = \frac{1}{n} \sum_{i=1}^{n} E[X_{i}] = \frac{1}{n} n\mu = \mu$; 
 $ Var[\overline{X}] = Var[\frac{1}{n}\sum X_{i}] = \frac{1}{n^2} Var[\sum X_{i}] = \frac{1}{n^2}n\sigma^2 = \frac{\sigma^2}{n} $; 
