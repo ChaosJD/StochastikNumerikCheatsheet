@@ -30,10 +30,10 @@ Das Resultierende LGS für die Koeffizienten $ c_{i} $ hat gestaffelte Form.
 \includegraphics[scale=0.25]{./pic/DividierendeDifferenzen.png}
 
 \subsection{Effizienz}
-\subsubsection{klasisch}
+\subsection{klasisch}
 $ p_{n} (x) = a_{n} x^{n} + ... + a_{0} $; 
 \textbf{Aufwand:} 2n-1 Mult.
-\subsubsection{Horner Schema}
+\subsection{Horner Schema}
 $ p_{3} (x) = a_{3} x^{3} + a_{2} x^{2} + a_{1} + a_{0} = (( a_{3} + a_{2} ) x + a_{1} )x+ a_{0} $; 
 Allg.: $ p_{n} (x) = ( ... ( a_{n} x + a_{n-1} ) x + ... + a_{1} ) x + a_{0} $; 
 \textbf{Aufwand:} n Mult.
@@ -45,9 +45,9 @@ Vergleichbar zum Restglied bei der Taylorreihenentwicklung;
 \textbf{Bemerkung:} $ \theta $ unbekannt, daher nur Fehlerabschätzung; 
 Fehler ist Abhängig von der Verteilung der Stützstellen; 
 Der Fehler ist bei großen n an den Intervallrändern deutlich größer, als in der Intervallmitte
-\subsubsection{Wahl der Stüztstellen}
+\subsection{Wahl der Stüztstellen}
 Runge Funktion $ (f) = \frac{ 1 }{ 1+25x^{2} } $ äquidistante Stützstellen das Interpolationspolynom nicht immer gegen die zugrundeliegende stetige Funktion konvergiert, wenn die Anzahl der Stützstellen \& damit der Grad des Polynoms wächst.\textbf{Lösung:}  Nicht-aquidistante Verteilung der Stützstellen, dichter an den Intervallgrenzen.
-\subsubsection{Chebyshev-Punkte}
+\subsection{Chebyshev-Punkte}
 haben die Eigenschaft; senkrechte Projektion von gleichverteilten Punkten auf dem Einheitskreis. $ t_{k} = cos\frac{ ( 2k-1 ) \pi }{ 2n }, k=1,...,n, auf ]-1,1[ $;  Invtervall: $ ]a,b[: x_{k} = \frac{ a +b }{2} + \frac{ b-a }{ 2 } t_{k} $. $\Rightarrow$ Fehler wird gleichmäßiger verteiltund Konvergenz erreicht.
 \subsection{Schwächen der Polynominterpolation}
 Hoher Rechenaufwand bei meist keiner hoher Differenzierbarkeitsgrad benötigt wird; RB kann Interpolationsfehler sehr groß sein; Bei wachsenden $n$ ist es unmöglich eine Konvergenz gegen die zu interpolierenden Funktion sicherzustellen;
@@ -59,7 +59,7 @@ Bibliotheken für Polynominterpolation;
 %Hinreichend glatte (( k -1 ) - mal stetig differenzierbare ) \& abschnittsweise aus Polynomen zusammengesetzte Funktion $ \hat{ = } $ Splines vom Grad $ k $ ( meist k = 2 or k =3 ).
 Jede Funktion $ S_{i} $ ist ein Polynom vom Grad  $ n \le k $ ; 
 $ S(x) $ ist $ ( k -1 ) $ - mal stetig differenzierbar, d.h. für alle $ x_{i} ( i = 1, ..., n-1 ) $ gilt: $ S_{ i-1 } ( x_{ i } ) = S_{ i } ( x_{i} ) $; 
-\subsubsection{Kubisch}
+\subsection{Kubisch}
 \textbf{Ansatz:} $ S_{ i } = a_{ i } + b_{ i } ( x- x_{ i } ) + c_{ i } (x-x_{i})^{2} + d_{i} (x-x_{i})^{3}$; 
 \textbf{Gleichungssystem:} 4n Parameter $ a_{i}, b_{i}, c_{i}, d_{i} ( i=0, ..., n-1) $; 
 \textbf{2n Interpolationsbedingungen:} am Rand je nur eine. $ S_{i} x_{i} = y_{i}$; 
@@ -76,4 +76,3 @@ $ S_{0}^{''}(x_{0}) = 0 $;
 $ S_{n-1}^{''}(x_{n}) = 0 $; 
 nach geschickter Umformung der Gleichungen hat das LGS Tridiagonalform. 
 \textbf{Rechenaufwand} $ \mathcal O ( n ) $ Gleitpunktoperationen.
-
