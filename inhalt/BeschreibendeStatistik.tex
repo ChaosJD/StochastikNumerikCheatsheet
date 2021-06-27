@@ -43,6 +43,13 @@
       1. Quartil = 0.25-Quantil; 
       Median = 0.5-Quantil; 
       3. Quartil = 0.75-Quartil; 
+      \begin{equation}
+      	x_{p}
+        \begin{cases}
+          x_{floor(np) +1} , np \in \mathbb{N}\\
+          \frac{1}{2} (x_{np} + x_{np+1}, np \notin \mathbb{N})\\
+        \end{cases}
+      \end{equation}
       \subsection{Interquartilsabstand I}
       $I = x_{0.75} - x_{0.25}$. Ist ein weiterer Streuungsparameter.
       \subsection{Chebyshev}
