@@ -1,19 +1,18 @@
 \section{BeschreibendeStatistik}
-  \subsection{Begriffe}
-    \subsubsection{Beschreibende/Deskriptive Statistik}
+    \subsection{Beschreibende/Deskriptive Statistik}
     Beobachtete Daten werden durch geeignete statistische Kennzahlen charakterisiert und durch geeignete Grafiken anschaulich gemacht.
-    \subsubsection{Schließende/Induktive Statistik}
+    \subsection{Schließende/Induktive Statistik}
     Aus beobachtete Daten werden Schlüsse gezogen und diese im Rahmen vorgegebener Modelle der Wahrscheinlichkeitstheorie bewertet.
-    \subsubsection{Grundgesamtheit}
+    \subsection{Grundgesamtheit}
     $\Omega$: Grundgesamtheit
     $\omega$:Element oder Objekt der Grundgesamtheit
-    diskret(<30 Ausprägungen), stetig($\geq$30 Ausprägungen), univariat(p=1), mulivariat(p>1); Diskrete Merkmale haben eine abzählbare Anzahl möglicher Ausprägungen. Stetige Merkmale habne eine nicht abzählbare (=überabzählbar) Anzahl möglicher Ausprägungen.
-  \subsection{Lagemaße}
-    \subsubsection{Modalwerte $x_{mod}$}
+    diskret(<30 Ausprägungen), stetig($\geq$30 Ausprägungen), univariat(p=1), mulivariat(p>1); Diskrete Merkmale haben eine abzählbare Anzahl möglicher Ausprägungen. Stetige Merkmale habne eine nicht abzählbare (=überabzählbar) Anzahl möglicher Ausprägungen.\\
+    \underline{Lagemaße}
+    \subsection{Modalwerte $x_{mod}$}
     Am häufigsten auftretende Ausprägungen (insbesondere bei \textbf{qualitativen} Merkmalen)
-\subsubsection{Mittelwert, quantitativ}
+    \subsection{Mittelwert, quantitativ}
     R:$mean(x)$\\
-    Schwerpunkt der Daten.\textbf{Empfindlich}gegemüber Ausreißern.
+    Schwerpunkt der Daten.\textbf{Empfindlich}gegenüber Ausreißern.
     $\overline{X} = \frac{1}{n} \sum_{i=1}^{n} x_{i}$
     \subsection{Median, quantitativ}
     R:$median(x)$\\
@@ -25,15 +24,15 @@
         	\frac{1}{2}(x_{\frac{n}{2}} + x_{\frac{n}{2}+1}) \text{, falls n gerade}
         \end{cases}
     \end{equation}
-  \subsection{Streuungsmaße}
-    \subsubsection{Spannweite}
+  \underline{Streuungsmaße}
+    \subsection{Spannweite}
     max $x_{i}$ - min $x_{i}$
-    \subsubsection{Stichprobenvarianz $s^2$}
+    \subsection{Stichprobenvarianz $s^2$}
     R:$var(x)$\\
     \textbf{Verschiebungssatz:}\\
       $s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_{i} - \overline{x}^2) = \frac{1}{n-1} (\sum_{i=1}^{n} x_{i}^2 - n\overline{x}^2)$
       Gemittelte Summe der quadratischen Abweichung vom Mittelwert
-      \subsubsection{Stichproben-\\standardabweichung}
+      \subsection{Stichpr.standardabw.}
       R:$sd(x)$\\
       $s=\sqrt{s}$
       Streuungsmaß mit gleicher Einheit wie beobachteten Daten $x_{i}$.$ \overline{x}$ minimiert die "quadratische Verlustfunktion" oder die Varianz gibt das Minimum der Fehlerquadrate an.
@@ -58,15 +57,15 @@
       $\frac{N(\overline{S}_{k})}{n} \leq \frac{1}{k^2}$; Die Ungleichheit lifert nur eine \textbf{sehr grobe Abschätzung}, ist aber unabhängig von der Verteilung der Daten. \textbf{Empirische Regeln} 68\% der Daten im Bereich um $\overline{x} \pm s$. 95\% um $\overline{x} \pm 2s$. 99.7\% um $\overline{x} \pm3s$.
       \subsection{Korrelation}
       Grafische Zusammenhang zwischen multivariaten Daten x und y durch ein Streudiagramm. Kennzahlen zur Untersuchung des Zusammenhangs:
-      \subsubsection{Empirische Kovarianz}
+      \subsection{Empirische Kovarianz}
       R:$cov(x,y)$;
       $s_{xy} = \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})=\frac{1}{n-1}(\sum_{i=1}^{n}(x_{i}y_{i})- n\overline{x}\overline{y})$; 
       $ S_{xy} > 0 $ steigend; 
       $ S_{xy} < 0 $ fallend; 
-      \subsubsection{Empir. Korrelk.koeff. r}
+      \subsection{Empir. Korrelk.koeff. r}
       R:$cor(x,y)$;
       $r = \frac{s_{xy}}{s_{x}s_{y}}$; Näherungsweise lin. Zusammenhang zw. x und y, falls |r| $\approx$1;
       \textbf{Bemerkung}: -Der Korrelationskoeffizient kann nur einen statistischen Zusammenhang beschreiben, keinen Kausalen; -Den Korrelationskoeffizient immer im Zusammenhang mit den Streudiagramm sehen (Anscombe-Quartett).
-      \subsubsection{Regressionsgerade y}
+      \subsection{Regressionsgerade y}
       $y = mx + t$ mit $m=r \cdot \frac{s_{y}}{s_{x}}$ und $ t=\overline{y} -m \cdot \overline{x}$;
       Für den Bereich $|\pm$0,7|$ bis $ bis $\pm 1   \Rightarrow $ linearer Zusammenhang.
