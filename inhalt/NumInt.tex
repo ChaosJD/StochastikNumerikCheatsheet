@@ -10,14 +10,14 @@ Singularität $\hat{=}$ isolierter Punkt, der ungewöhnliches Verhalten zeigt;
 Das Intergral des $ p_{k} $ diens al Appr. für das Int. von f(x); 
 $ \int_{0}^{1} f(t) dt \approx \int_{0}^{1} p_{k} (t) dt =  \sum_{j=0}^{k} \alpha_j f( t_{j} ) $ Das Interpolationspolynom muss nicht explizit aufgestellt werden, es dient vorab der Bestimmung der Gewichte $ \alpha_{j} $; 
 $ \int_{0}^{1} p_{k}(t) = \int_{0}^{1} \sum f( t_{j} ) L_{j} (t) dt = \sum f ( t_{j} ) \int_{0}^{1} L_{j} (t) dt $
-\subsubsection{Trapezregel}
+\subsection{Trapezregel}
 $ T_{1}: $ 
 $ \int_{0}^{1} f (t) dt \approx \frac{1}{2} ( f(0) + f(1) ) $; 
 $ \int_{a}^{b} f (x) dx \approx \frac{(b-a)}{2} (f(a) + f(b) ) $;\\
 $ T_{n}: $
 Für Teilintervalle mit gleicher Länge: $ h = \frac{b-a}{n} $;  
 $ T_{n} = h (\frac{ f ( x_{0} ) }{2} + f(x_{1}) + ... + f(x_{n-1}) + \frac{ f(x_n) }{2} ) $; 
-\subsubsection{SimpsonRegel}
+\subsection{SimpsonRegel}
 $ S_{1}: $ 
 $ \int_{0}^{1} f (t) dt \approx \frac{1}{6} ( f(0) + 4f(0.5) + f(1) ) $; 
 $\int_{a}^{b} f (x) dx \approx \frac{b-a}{6} ( f(a) + 4f( \frac{a+b}{2}) + f(b) ) $; 
