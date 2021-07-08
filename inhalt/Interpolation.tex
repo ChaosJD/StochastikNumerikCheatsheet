@@ -14,7 +14,7 @@ Die Koeffizientenmatrix ist die sog. \textbf{Vandermonde Matrix}; \textbf{Eigens
 \subsection{Lagrange, quer}
 \textbf{2 Formeln}; 
 $ p_{n}(x) = y_{0} L_{0} (x) + y_{1} L_{1} (x)+ ... +y_{n} L_{n} (x) $;
-$ L_{k}(x) \prod_{ j = 0;j\neq k }^{n} \frac{ x-x_{j} }{ x_{k} - y_{j} } $; 
+$ L_{k}(x) \prod_{ j = 0;j\neq k }^{n} \frac{ x-x_{j} }{ x_{k} - x_{j} } $; 
 Jede Basisfunktion $ L_{k}(x) $ ist ein Polynom vom Grad $ \le n $; 
 \textbf{Bemerkung:} Findet Anwendung bei Numerischer Integration; Wenn Stützstellen $ x_{i}  $ gleich bleiben \& nur $ y_{i} $ ändern $ \Rightarrow $ keine Neuberechnung; Rechenaufwand $ \mathcal O ( ( n +1)^{2} ) $; Kommen neue Stützpunkte hinzu $ \Rightarrow $ Neuberechnung\textbf{!}; Die Interpolationspolynome liefern nur sinnvolle \textbf{ Näherungswerte } für x-Werte, die zwischen den gegebenen Stützstellen liegen; Extrapolation ( Näherungwerte für x-Werte außerhalb der Stützstellen ) kann zu großen Abweichungen führen.
 
