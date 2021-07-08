@@ -44,13 +44,15 @@ $ \frac{1}{4} = \int_{0}^{1} x^{3} \overset{!}{=} $;
 Für (globalen ) Fehler $ e_{In}  = \int_{a}^{b} f(x) dx -I_{n} $ einer Quadraturformel $I_{n} $ der Ordnung $ p$  auf $ [a,b] $ gilt: 
 $ |e_{In} | = (b-a) h^{p}K|f^{ (p) } (\xi)| . \xi \in ]a,b[, h = \frac{ b-a }{ n}  $ \textbf{\&} 
 $ |e_{In} | \le (b-a) h^{p} K \cdot max_{a \le x \le b} | f^{ (p) } (x) | $ ; 
-\subsection{ Fehler $T_{n}$ }
-Der Fehler ist proportional zu $ h^2 $; Eine Halbierung der Intervalllänge reduziert den Fehler um den Faktor $ 1 / 4 $; Ein Integral kann beliebig genau approx. werden, falls h entsprechend klein gewählt wird. \textbf{Aber} Rundungsfehler bei vielen Rechenoperationen, verschlechtert wieder das Ergebnis. Vorteil von Verfahren höherer Ordnung: Weniger Teilintervalle nötig.
-$ |e_{T_n} | \le \frac{ h^2 }{12} (b-a) max_{a \le x \le b} | f^{''} (x) |, K =\frac{1}{12}, h = \frac{ b-a }{n} $
 
-\subsection{Fehler $ S_{n} $}
-Der Fehler ist proportional zu $ h^4 $; Eine Halbierung der Intervalllänge reduziert den Fehler um den Faktor $ \frac{1}{16} $;
-$ | e_{Sn} | \le \frac{ h^{4} }{180} (b-a) max_{a \le x \le b} | f^{4} (x) |, h= \frac{(b-a)}{2n}, K = \frac{1}{180} $
+%\subsection{ Fehler $T_{n}$ }
+%Der Fehler ist proportional zu $ h^2 $; Eine Halbierung der Intervalllänge reduziert den Fehler um den Faktor $ 1 / 4 $; Ein Integral kann beliebig genau approx. werden, falls h entsprechend klein gewählt wird. \textbf{Aber} Rundungsfehler bei vielen Rechenoperationen, verschlechtert wieder das Ergebnis. Vorteil von Verfahren höherer Ordnung: Weniger Teilintervalle nötig.
+%$ |e_{T_n} | \le \frac{ h^2 }{12} (b-a) max_{a \le x \le b} | f^{''} (x) |, K =\frac{1}{12}, h = \frac{ b-a }{n} $
+%
+%\subsection{Fehler $ S_{n} $}
+%Der Fehler ist proportional zu $ h^4 $; Eine Halbierung der Intervalllänge reduziert den Fehler um den Faktor $ \frac{1}{16} $;
+%$ | e_{Sn} | \le \frac{ h^{4} }{180} (b-a) max_{a \le x \le b} | f^{4} (x) |, h= \frac{(b-a)}{2n}, K = \frac{1}{180} $
+
 \subsection{Grenzen NeCo}
 viele äquidistante Knoten $\rightarrow$ Gewichte negativ $\rightarrow$ Verfahren instabil; 
 geschlossene NeCoRe $\rightarrow$ Funktionsauswertung an RB $\rightarrow$ Problem mit Singularitäten.
