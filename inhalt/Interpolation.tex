@@ -46,7 +46,8 @@ Vergleichbar zum Restglied bei der Taylorreihenentwicklung;
 Fehler ist Abhängig von der Verteilung der Stützstellen; 
 Der Fehler ist bei großen n an den Intervallrändern deutlich größer, als in der Intervallmitte
 \subsection{Wahl der Stüztstellen}
-Runge Funktion $ (f) = \frac{ 1 }{ 1+25x^{2} } $ äquidistante Stützstellen das Interpolationspolynom nicht immer gegen die zugrundeliegende stetige Funktion konvergiert, wenn die Anzahl der Stützstellen \& damit der Grad des Polynoms wächst.\textbf{Lösung:}  Nicht-aquidistante Verteilung der Stützstellen, dichter an den Intervallgrenzen.
+%Runge Funktion $ (f) = \frac{ 1 }{ 1+25x^{2} } $
+Mit äquidistante Stützstellen konvergiert das Interpolationspolynom nicht immer gegen die zugrundeliegende stetige Funktion, wenn die Anzahl der Stützstellen \& damit der Grad des Polynoms wächst.\textbf{Lösung:}  Nicht-aquidistante Verteilung der Stützstellen, dichter an den Intervallgrenzen.
 \subsection{Chebyshev-Punkte}
 haben die Eigenschaft; senkrechte Projektion von gleichverteilten Punkten auf dem Einheitskreis. $ t_{k} = cos\frac{ ( 2k-1 ) \pi }{ 2n }, k=1,...,n, auf ]-1,1[ $;  Invtervall: $ ]a,b[: x_{k} = \frac{ a +b }{2} + \frac{ b-a }{ 2 } t_{k} $. $\Rightarrow$ Fehler wird gleichmäßiger verteiltund Konvergenz erreicht.
 \subsection{Schwächen der Polynominterpolation}
@@ -63,7 +64,7 @@ $ S(x) $ ist $ ( k -1 ) $ - mal stetig differenzierbar, d.h. für alle $ x_{i} (
 \textbf{Ansatz:} $ S_{ i } = a_{ i } + b_{ i } ( x- x_{ i } ) + c_{ i } (x-x_{i})^{2} + d_{i} (x-x_{i})^{3}$; 
 \textbf{Gleichungssystem:} 4n Parameter $ a_{i}, b_{i}, c_{i}, d_{i} ( i=0, ..., n-1) $; 
 \textbf{2n Interpolationsbedingungen:} am Rand je nur eine. $ S_{i} x_{i} = y_{i}$; 
-$ Si (x_{i+1}) = y_{i+1}$ für $  ( i= 0, 1, ..., n-1) \Rightarrow $ Stetigkeit; 
+$ S_i (x_{i+1}) = y_{i+1}$ für $  ( i= 0, 1, ..., n-1) \Rightarrow $ Stetigkeit; 
 \textbf{Stetigkeit der 1. Abl:} 
 $ S_{i}^{'} (x_{i+1}) = S_{i+1}^{'}(x_{i+1}) $; 
 $ \Leftrightarrow S_{i}^{'}(x_{i+1}) - S_{i+1}^{'} ( x_{i+1}) = 0 $; 
