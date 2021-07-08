@@ -11,7 +11,7 @@ Unterschiedliche Darstellungen für ein Interpolationspolynom $ G(x) = p_{n}(x) 
 \includegraphics[scale=0.25]{./pic/VandermondeMatrix.png}
 Die Koeffizientenmatrix ist die sog. \textbf{Vandermonde Matrix}; \textbf{Eigenschaften:} Die Vandermonde Matrix ist nicht singulär( falls alle $ x_{i} $ verschieden); Rechenaufwand: $ \mathcal O ( n^{3} ) $; Für große n sehr schlecht konditioniert \& als Allgemeiner Ansatz ungeeignet.
 
-\subsection{Lagrange}
+\subsection{Lagrange, quer}
 \textbf{2 Formeln}; 
 $ p_{n}(x) = y_{0} L_{0} (x) + y_{1} L_{1} (x)+ ... +y_{n} L_{n} (x) $;
 $ L_{k}(x) \prod_{ j = 0;j\neq k }^{n} \frac{ x-x_{j} }{ x_{k} - y_{j} } $; 
