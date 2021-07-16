@@ -6,7 +6,7 @@ TG = Prüfgröße;
 TG* = standardisierte Prüfgröße; 
 siginifikante Schlussfolgerung = $ H_{0} $ verworfen $\rightarrow$ klassischer Parametertest; 
 schwache Schlussfolgerung = $ H_{0} $ wird nicht verworfen $\rightarrow$ klassischer Parametertest.
-p-Wert = beobachtetes Signifikanzniveau
+p-Wert = beobachtetes Signifikanzniveau; $ H_{0} = $ angezweifelten Aussage
 \subsection{Null- und Gegenhypothese}
 \textbf{Modell:} Verteilung der Grundgesamtheit or Testgröße \textbf{TG} ( häufig $\overline{x}$ ) ist bekannt bis auf einen Parameter, z.B. $ \mu $, für den eine Hypothese aufgestellt wird.
 $ TG \sim  N_{\mu, \sigma^2}$; 
@@ -38,7 +38,7 @@ $ H_{0}: \mu \ge \mu_{0} $ gegen $ H_{1}: \mu  < \mu_{0}$
 \subsection{rechtsseitig}
 $ H_{0}: \mu \le \mu_{0} $ gegen $ H_{1}: \mu > \mu_{0} $
 \hrule
-$ P_{\mu 0} ( \overline{X} \in C ) \le \alpha \Leftrightarrow TG = \frac{ \overline{ X } - \mu_{0} }{ \sigma_{0} } \sqrt{n} < \phi^{-1} ( \alpha ) $; 
+Hier nur linksseitig!:$ P_{\mu 0} ( \overline{X} \in C ) \le \alpha \Leftrightarrow TG = \frac{ \overline{ X } - \mu_{0} }{ \sigma_{0} } \sqrt{n} < \phi^{-1} ( \alpha ) $; 
 \textbf{Testentscheidung:} $ H_{0} $ wird abgelehnt falls, $ TG < \phi^{-1} ( \alpha )$; 
 $ H_{0} $ wird angenommen, falls $ TG \ge \phi^{-1} ( \alpha ) $; 
 \includegraphics[scale=0.25]{./pic/EinseitigerGausTest.png}
