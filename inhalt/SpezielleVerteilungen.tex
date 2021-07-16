@@ -32,7 +32,7 @@ $\textcolor{red}{d}hyper(k,M,N,n)=P(X=k)$;
 $\textcolor{red}{p}hyper(k,M,N,n)=F(k)$;
 Falls $ 20n \le M + N \& M + N $ groß, Unterschied zw. "Ziehen ohne bzw. mit Zurücklegen" unwesentlich, es kann die Binomialverteilung mit $ p = \frac{M}{M+N} $ als Approximation für die hypergeom. Vert. verwendet werden.
 \subsection{Poisson-Verteilung}
-\textbf{Verteilung der seltenen Ereignisse} Häufigkeit punktförmiger Ereignisse in einem Kontinuum. Die durchschnittlich zu erwartende Anzahl der Erfolge $\lambda$ pro Maßeinheit (i. a. Zeiteinheit) sei bekannt. $k \in \mathbb{N}_{0} \rightarrow diskret$
+\underline{Verteilung der seltenen Ereignisse} Häufigkeit punktförmiger Ereignisse in einem Kontinuum. Die durchschnittlich zu erwartende Anzahl der Erfolge $\lambda$ pro Maßeinheit (i. a. Zeiteinheit) sei bekannt. $k \in \mathbb{N}_{0} \rightarrow diskret$
 \textbf{Wahrscheinlichkeit}$P (X = k) = \frac{\lambda^k}{k!}e^{-\lambda}$ mit $ \sum_{k=0}^{\infty} P(X=k) = 1, da \sum_{k=0}^{\infty} \frac{\lambda^k}{k!} = e^{\lambda}$; 
 \textbf{Verteilung} $X \thicksim P_{\lambda}$; 
 $E[X] = \lambda, da \sum_{k=0}^{\infty} k\frac{\lambda^k}{k!} e^{-\lambda} = e^{-\lambda}\sum_{k=1}^{\infty}\lambda \frac{\lambda^{k-1}}{(k-1)!} = \lambda e^{-\lambda} \sum_{i=0}^{\infty} \frac{\lambda^i}{i!} = \lambda$; 
