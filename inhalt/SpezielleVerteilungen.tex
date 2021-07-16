@@ -30,7 +30,7 @@ $ P(X=k) = \frac{\binom{M}{k} \cdot \binom{N}{n-k}}{\binom{M+N}{n}}, k \in \{0, 
 \textbf{R:}
 $\textcolor{red}{d}hyper(k,M,N,n)=P(X=k)$;
 $\textcolor{red}{p}hyper(k,M,N,n)=F(k)$;
-Falls 20n ≤M + N \& M + N groß, Unterschied zw. "Ziehen ohne bzw. mit Zurücklegen" unwesentlich, es kann die Binomialverteilung mit $ p = \frac{M}{M+N} $ als Approximation für die hypergeom. Vert. verwendet werden.
+Falls $ 20n \le M + N \& M + N $ groß, Unterschied zw. "Ziehen ohne bzw. mit Zurücklegen" unwesentlich, es kann die Binomialverteilung mit $ p = \frac{M}{M+N} $ als Approximation für die hypergeom. Vert. verwendet werden.
 \subsection{Poisson-Verteilung}
 \textbf{Verteilung der seltenen Ereignisse} Häufigkeit punktförmiger Ereignisse in einem Kontinuum. Die durchschnittlich zu erwartende Anzahl der Erfolge $\lambda$ pro Maßeinheit (i. a. Zeiteinheit) sei bekannt. $k \in \mathbb{N}_{0} \rightarrow diskret$
 \textbf{Wahrscheinlichkeit}$P (X = k) = \frac{\lambda^k}{k!}e^{-\lambda}$ mit $ \sum_{k=0}^{\infty} P(X=k) = 1, da \sum_{k=0}^{\infty} \frac{\lambda^k}{k!} = e^{\lambda}$; 
@@ -81,7 +81,8 @@ $\textcolor{red}{q} norm(q,\mu,\textcolor{red}{\sigma}):q-Quantil $;
 \textbf{Wendestelle} von $ f(x) $ bei $ x = \mu \pm \sigma $; 
 $ E[aX + b] = aE[X] + b $; 
 $ Var [aX + b] = a^2 Var[X] $; 
-$ X \thicksim N_{\mu, \sigma^2} \Rightarrow aX + b \thicksim N_{a\mu+b, a^2\sigma^2}$ und $ \frac{X-\mu}{\sigma} \thicksim N_{0,1} $; 
+$ X \thicksim N_{\mu, \sigma^2} \Rightarrow aX + b \thicksim N_{a\mu+b, a^2\sigma^2}$ und 
+\underline{Z-Trafo:} $ \frac{X-\mu}{\sigma} \thicksim N_{0,1} $; 
 $ X_ {1} \thicksim N_{\mu_{1}, \sigma_{1}^2}$ und $ X_{2} \thicksim N_{\mu_{2}, \sigma_{2}^2} \underbrace{\Rightarrow} X_{1} + X_{2} \thicksim N_{ \mu_{1} + \mu_{2}, \sigma_{1}^2 + \sigma_{2}^2} $;\\
 $ X_{1}, X_{2} $ stochastisch unabhängig
 \subsection{Standardnormalverteilung}
@@ -97,9 +98,9 @@ $ -x_{0.25} = x_{0.75} $;
 %\includegraphics[scale=0.3]{./pic/NormalverteilungDichtefunktion.png}
 %\includegraphics[scale=0.3]{./pic/NormalverteilungVerteilungsfunktion.png}
 \textbf{Schätzwerte:}
-$ Z = \frac{x-\mu}{\sigma} \thicksim N_ {0,1}$;\\
-$ P( \mu -\sigma \le X \le \mu + \sigma) = P ( -1 \le Z \le 1 ) \approx 68\% $; \\
-$ P ( \mu -2\sigma \le X \le \mu +2\sigma ) = P( -2 \le Z \le 2 ) \approx 95\% $; \\
+$ Z = \frac{x-\mu}{\sigma} \thicksim N_ {0,1}$; 
+$ P( \mu -\sigma \le X \le \mu + \sigma) = P ( -1 \le Z \le 1 ) \approx 68\% $; 
+$ P ( \mu -2\sigma \le X \le \mu +2\sigma ) = P( -2 \le Z \le 2 ) \approx 95\% $; 
 $ P( \mu - 3 \sigma \le X \le \mu + 3\sigma) = P ( -3 \le Z \le 3 ) \approx 99.7\% $
 \subsection{Exponentialverteilung}
 Modellierung von Lebensdauern, Wartezeiten Sei $ Y_{t} \thicksim P_{\lambda t} $ im Intervall $ [0,t] $  von $ t $  Zeiteinheiten, dann beschreibt die Exponentialverteilung die Wartezeit $ X $ bis zum Eintreten eines Ereignisses; 
