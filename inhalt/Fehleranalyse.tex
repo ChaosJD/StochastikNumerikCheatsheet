@@ -11,3 +11,11 @@ $ x_{1,2} = \frac{2a}{-b \mp \sqrt{b^2 -4ac}} $;
 b>0, dann (2), für $ x_1 $ \&(1) für $ x_2 $ or 
 b<0, (1) für $x_{1} $ \& (2) für $ x_2 $;
 Falls 4ac klein im Vergleich zu $ b^2$, dann evtl. Probleme der Auslöschung.
+\subsection{Stabilität}
+Verfahren, wenn es gegenüber kleinen Störungen unempfindlich ist. Rundungsfehler nicht zu stark auf die Berechnung auswirken. Man unterscheidet bei der numerischen Lösung mathematischer Probleme Kondition, Stabilität und Konsistenz. Stabilität ist dabei eine Eigenschaft des Algorithmus und die Kondition eine Eigenschaft des Problems. Die Beziehung zwischen diesen Größen lässt sich wie folgt beschreiben:
+$f(x) $ =mathematische Problem in Abhängigkeit von der Eingabe $ x, \tilde{f}$ = numerische Algorithmus, 
+$ \tilde{x} $ = gestörten Eingabedaten:
+$ || f(\tilde{x}) - f(x) || $ Kondition: Schwankung des Problems bei Störung; 
+$ ||\tilde{f}( \tilde{x} ) - \tilde{f} (x) || $ Stabilität: Schwankung des numerische Algorithmus bei Störung; 
+$ ||\tilde{f}(x)-f(x) || $ Konsistenz: Wie gut löst der Algorithmus (mit exakter Eingabe) tatsächlich das Problem; 
+$ || \tilde{f}( \tilde{x} )-f(x)|| $Konvergenz: Wie gut löst der gestörte Algorithmus das Problem; 
